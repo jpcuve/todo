@@ -1,0 +1,126 @@
+************************************************************************************         PROOF OF CONCEPT - Version provisoire du 6/2/2013                       ************************************************************************************
+Lecture du bloc1
+déjà traité:9836 CDR
+Le fichier contient:9836 CDR
+Le fichier contient:10 Catégories d'Appels
+il reste:39 numéros à traiter
+il reste:38 numéros à traiter
+il reste:37 numéros à traiter
+il reste:36 numéros à traiter
+il reste:35 numéros à traiter
+il reste:34 numéros à traiter
+il reste:33 numéros à traiter
+il reste:32 numéros à traiter
+il reste:31 numéros à traiter
+il reste:30 numéros à traiter
+il reste:29 numéros à traiter
+il reste:28 numéros à traiter
+il reste:27 numéros à traiter
+il reste:26 numéros à traiter
+il reste:25 numéros à traiter
+il reste:24 numéros à traiter
+il reste:23 numéros à traiter
+il reste:22 numéros à traiter
+il reste:21 numéros à traiter
+il reste:20 numéros à traiter
+il reste:19 numéros à traiter
+il reste:18 numéros à traiter
+il reste:17 numéros à traiter
+il reste:16 numéros à traiter
+il reste:15 numéros à traiter
+il reste:14 numéros à traiter
+il reste:13 numéros à traiter
+il reste:12 numéros à traiter
+il reste:11 numéros à traiter
+il reste:10 numéros à traiter
+il reste:9 numéros à traiter
+il reste:8 numéros à traiter
+il reste:7 numéros à traiter
+il reste:6 numéros à traiter
+il reste:5 numéros à traiter
+il reste:4 numéros à traiter
+il reste:3 numéros à traiter
+il reste:2 numéros à traiter
+il reste:1 numéros à traiter
+il reste:0 numéros à traiter
+le reporting de patrick.seigneur@lhoist.com est sauvé - il en reste:39 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0601231073__(patrick.seigneur@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de michael.heutte@lhoist.com est sauvé - il en reste:38 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0603269823__(michael.heutte@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de didier.lesueur@lhoist.com est sauvé - il en reste:37 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0603985695__(didier.lesueur@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de kevin.chadzelek@lhoist.com est sauvé - il en reste:36 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0610652766__(kevin.chadzelek@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de jean-francois.royan@lhoist.com est sauvé - il en reste:35 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278056__(jean-francois.royan@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de jean-louis.cornuey@lhoist.com est sauvé - il en reste:34 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278057__(jean-louis.cornuey@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de eddie.daouadi@lhoist.com est sauvé - il en reste:33 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278058__(eddie.daouadi@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de diane.sockeel@lhoist.com est sauvé - il en reste:32 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278061__(diane.sockeel@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de esther.ouerghi@lhoist.com est sauvé - il en reste:31 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278065__(esther.ouerghi@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de laurent.devanneaux@lhoist.com est sauvé - il en reste:30 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278067__(laurent.devanneaux@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de francois-xavier.duroy@lhoist.com est sauvé - il en reste:29 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278068__(francois-xavier.duroy@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de pascal.delamarre@lhoist.com est sauvé - il en reste:28 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0611278069__(pascal.delamarre@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de damien.gheza@lhoist.com est sauvé - il en reste:27 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0612544944__(damien.gheza@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de blandine.kimmel@lhoist.com est sauvé - il en reste:26 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0612896873__(blandine.kimmel@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de  est sauvé - il en reste:25 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0613660504__()_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de jean-marc.richard@lhoist.com est sauvé - il en reste:24 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0614066136__(jean-marc.richard@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de alexia.arsac@lhoist.com est sauvé - il en reste:23 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0614150922__(alexia.arsac@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de pascal.leconte@lhoist.com est sauvé - il en reste:22 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0614398572__(pascal.leconte@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de vincent.lelong@lhoist.com est sauvé - il en reste:21 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0615886454__(vincent.lelong@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de chantal.lhuillery@lhoist.com est sauvé - il en reste:20 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0616793961__(chantal.lhuillery@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de damien.gheza@lhoist.com est sauvé - il en reste:19 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0618482900__(damien.gheza@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de jerome.decarbonnieres@lhoist.com est sauvé - il en reste:18 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0618482950__(jerome.decarbonnieres@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de siegfried.tenas@lhoist.com est sauvé - il en reste:17 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0618734221__(siegfried.tenas@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de philippe.paysan@lhoist.com est sauvé - il en reste:16 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0619100712__(philippe.paysan@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de jacques.chanteclair@lhoist.com est sauvé - il en reste:15 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0620281006__(jacques.chanteclair@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de No_MUAC est sauvé - il en reste:14 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0620281007__()_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de thierry.jost@lhoist.com est sauvé - il en reste:13 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0620285348__(thierry.jost@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de joelle.bourienne@lhoist.com est sauvé - il en reste:12 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0620436375__(joelle.bourienne@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de  est sauvé - il en reste:11 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0621690203__()_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de alain.dubal@lhoist.com est sauvé - il en reste:10 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0622047889__(alain.dubal@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de amandine.gambin@lhoist.com est sauvé - il en reste:9 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0623013289__(amandine.gambin@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de ariane.descornes@lhoist.com est sauvé - il en reste:8 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0623892877__(ariane.descornes@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de philippe.carrouche@lhoist.com est sauvé - il en reste:7 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0627615636__(philippe.carrouche@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de patrick.seigneur@lhoist.com est sauvé - il en reste:6 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0627702787__(patrick.seigneur@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de franck.thery@lhoist.com est sauvé - il en reste:5 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0628778514__(franck.thery@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de anne.dervilly@lhoist.com est sauvé - il en reste:4 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0629825007__(anne.dervilly@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de roxane.verneuil@lhoist.com est sauvé - il en reste:3 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0629850763__(roxane.verneuil@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de jean-louis.cornuey@lhoist.com est sauvé - il en reste:2 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0635100695__(jean-louis.cornuey@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de christian.kolczynski@lhoist.com est sauvé - il en reste:1 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0673125240__(christian.kolczynski@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+le reporting de philippe.carrouche@lhoist.com est sauvé - il en reste:0 à traiter
+sauvé sous \\BEC2SRVR-MSTR2\ProdLib\1_ClientLib\FR_LHOISTP_01\7_Output\MUAC\201505_test\0685506594__(philippe.carrouche@lhoist.com)_Call_data_records_Lhoist France_traffic_201505.txt
+FIN EXECUTION:03-Jul-2015 10:03:15- DEBUT EXECUTATION:03-Jul-2015 09:58:18

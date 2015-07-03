@@ -1,0 +1,48 @@
+Cost summary;Traffic name;Number of Calls;Units (Min/MB/SMS);Cost;Cost / unit ;;;;;;0.000000;41.850000;24;1;4 ;1 ;41.850;42.122;0613660504;;0613660504;Line_not_identified;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Histogram Lhoist France - Traffic & Subscriptions;Spend;Number of users;You are here;Number of users;You belong to this range;40; 
+Autres prestations;Subscriptions;1; 1.0;0.00;0.000 
+Ligne Mobile Smartphone International 24/7;Subscriptions;1; 1.0;49.50;49.500 
+Remises sur Consommations;Others;1; 1.0;0.00;0.000 
+Services et Options;Subscriptions;1; 1.0;-7.65;-7.650 
+Total cost traffic only;;;;0.000000 
+Total cost with subscriptions;;;;41.850000 
+
+Benchmarking cost for;Your position;Cost per traffic type compared to average 
+Subscriptions;21 ;   7.0  
+Total cost (Traffic & Subscriptions);24 ; -0 
+Number of benchmarked lines;  40 
+0.00 ; 0.00 
+10.00 ; 7.00 
+20.00 ; 4.00 
+30.00 ; 5.00 
+You are here ; 17.000000 ; 17.000000
+50.00 ; 2.00 
+60.00 ; 2.00 
+70.00 ; 1.00 
+80.00 ; 0.00 
+90.00 ; 0.00 
+100.00 ; 0.00 
+110.00 ; 1.00 
+120.00 ; 1.00 
+130.00 ; 0.00 
+140.00 ; 0.00 
+150.00 ; 0.00 
+160.00 ; 0.00 
+170.00 ; 0.00 
+180.00 ; 0.00 
+190.00 ; 0.00 
+200.00 ; 0.00 
+210.00 ; 0.00 
+220.00 ; 0.00 
+230.00 ; 0.00 
+240.00 ; 0.00 
+250.00 ; 0.00 
+260.00 ; 0.00 
+270.00 ; 0.00 
+280.00 ; 0.00 
+300.00 ; 0.00 
+3000.00 ; 0.00 
+  
+Call details 
+Type of traffic;Traffic name;Destination / Visited network;Date;Called number;Units;Cost 
+Others;Remises sur Consommations;; ;No Number;1;0;;; 
+ #Appels/Oproepen/Calls: ; 1.000000

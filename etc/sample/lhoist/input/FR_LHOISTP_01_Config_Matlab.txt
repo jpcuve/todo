@@ -1,0 +1,39 @@
+Explication;Nom de la variable / Langue utilisateur;EN;FR;NL;IT;DE
+Histogram {0} - {1};HIST_1;Histogram Lhoist France - Traffic & Subscriptions;Histogramme Lhoist France - Trafic & Abonnements;Histogram Lhoist France - Verbruik & Abonnementen;Istrogramma Lhoist France - Traffico & Abbonamenti;Mobilfunkkostenhistogram Lhoist France - Anrufe & Abonnements
+Spend;HIST_2;Spend;Dépenses;Uitgaven;Spesa;Kosten
+Number of users;HIST_3;Number of users;Nombre d'utilisateurs;Aantal (actieve) gebruikers;Numero utenti;Anzahl Mobilfunkverträge je Kategorie
+You are here;HIST_4;You are here;Votre position;U bent hier;La tua posizione;Ihre Position
+Number of users;HIST_5;Number of users;Nombre d'utilisateurs;Aantal (actieve) gebruikers;Numero utenti;Anzahl der Mitarbeiter je Kategorie
+You belong to this range;HIST_6;You belong to this range;Vous êtes dans cette tranche;U bevindt zich in deze groep;Tu appartieni a questa fascia;Sie befinden sich in dieser Kategorie
+Cost summary;CS_1;Cost summary;Résumé de votre Coût;De samenvattende tabel (uw factuur);Riassunto Costi;Rechnungbereich
+Traffic name;CS_2;Traffic name;Type d'appel;De oproepcategorie;Tipologia Traffico;Rechnungsübersicht
+Number of Calls;CS_3;Number of Calls;Nombre d'appels;Aantal oproepen;Numero chiamate;Anzahl der Anrufe
+Units (Min/MB/SMS);CS_4;Units (Min/MB/SMS);Unités (Min/MB/SMS);Eenheden (Min/MB/SMS);Unità (Min/MB/SMS);Einheiten (Min/MB/SMS)
+Cost;CS_5;Cost;Coût;Kost;Costo;EUR (Netto)
+Cost / unit;CS_6;Cost / unit;Coût / Unité;Prijs per eenheid;Costo / unità;Kosten / Einheit
+Total cost traffic only;CS_7;Total cost traffic only;Coût total de l'usage;Totale kost van het verbruik;Costo totale solo traffico;Gesamtkosten des Verbrauchs
+Total cost with subscriptions;CS_8;Total cost with subscriptions;Coût total avec les abonnements;Totale kost verbruik en abonnementen;Costo totale (abbonamenti inclusi);Gesamtkosten
+Benchmarking cost for;TR_1;Benchmarking cost for;Tableau de comparaison de votre usage pour;Vergelijking van uw verbruik voor;Valori di riferimento (Benchmarking) per;Benchmarking Kosten für
+Your position;TR_2;Your position;Votre classement;Uw klassement;La tua posizione;Ihre Position
+Cost per traffic type compared to average;TR_3;Cost per traffic type compared to average;Votre coût par rapport à la moyenne;Uw kost ten opzichte van het gemiddelde;Costi per tipo di traffico rispetto alla media;Kosten pro Anruftyp im Vergleich zum Durchschnitt
+SUBSCRIPTION;TR_4;Subscriptions;Abonnements;Abonnementen;Abbonamenti;Abonnements
+NATIONAL;TR_5;National;National;Nationaal;Nazionale;Nationalen
+INTERNATIONAL;TR_6;International;International;Internationaal;Internazionale;Internationalen
+SMS;TR_7;SMS;SMS;SMS;SMS;SMS
+ROAMING_VOICE;TR_8;Roaming Voice;Communications à l'étranger;Verbruik in het buitenland;Roaming Voce;Roaming-Stimme
+DATA_NATIONAL;TR_9;Data National;Data National;Data Nationaal;Dati Nazionale;Data der Nationalen
+DATA_INTERNATIONAL;TR_10;Data International;Data International;Data in het buitenland;Dati Internazionale;Data der Internationalen
+MOBILE_COMMERCE;TR_11;Mobile Commerce;Mobile Commerce;Mobile Commerce;Mobile Commerce;Mobile Commerce
+MULTIMEDIA;TR_12;Multimedia;Multimédia;Multimedia;Multimedia;Multimedia
+OTHER;TR_13;Others;Autres;Andere;Altro;Andere
+Total cost ({1});TR_14;Total cost (Traffic & Subscriptions);Coût total (Trafic & Abonnements);Totale kost (Verbruik & Abonnementen);Totale (Traffico & Abbonamenti);Gesamtkosten (Anrufe & Abonnements)
+Number of benchmarked lines;TR_15;Number of benchmarked lines;Nombres de lignes comparées;Aantal vergeleken lijnen;Numero di linee riferite;Anzahl der verglichenen Telefonlinien
+Call details;CD_1;Call details;Détails des appels;Gedetailleerd verbruik;Dettagli Chiamate;Einzelverbindungsnachweis
+Type of traffic;CD_2;Type of traffic;Type de trafic;Trafiektype;Tipo di Traffico;Tarifzonen
+Traffic name;CD_3;Traffic name;Type d'appel;Oproeptype;Traffico;Anruftyp
+Destination / Visited network;CD_4;Destination / Visited network;Destination / réseau visité;bestemming / bezochte netwerk;Destinazione / Rete (operatore);Ziel / besuchtes Netz
+Date;CD_5;Date;Date;Datum en uur;Data;Datum / Stunde
+Called number;CD_6;Called number;Numéro composé;Het gevormde nummer;Numero chiamato;Zielrufnummer
+Units;CD_7;Units;Unités;Eenheden;Unità;Dauer oder Anzahl in Stück, Minuten oder MByte
+Cost;CD_8;Cost;Coût;Kost;Costo;Kosten
+{2};CD_9;;;;;

@@ -1,0 +1,92 @@
+Résumé de votre Coût;Type d'appel;Nombre d'appels;Unités (Min/MB/SMS);Coût;Coût / Unité ;;;;;;0.190000;12.790000;39;38;9 ;3 ;41.850;42.122;0623892877;ariane.descornes@lhoist.com;0623892877;Ariane Descornes;;;;Y;Y;FR;ariane.descornes@lhoist.com;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Histogramme Lhoist France - Trafic & Abonnements;Dépenses;Nombre d'utilisateurs;Votre position;Nombre d'utilisateurs;Vous êtes dans cette tranche;40; 
+Appel interne numéro court;National;5; 5.3;0.00;0.000 
+Appel vers l'étranger ou les DOM-TOM;International;2; 0.7;0.29;0.405 
+Appel vers tél. fixe en France;National;8;12.1;0.00;0.000 
+Appel vers un portable;National;21;105.7;0.00;0.000 
+Autres prestations;Abonnements;1; 1.0;0.00;0.000 
+Ligne Mobile Voix SMS 24/7;Abonnements;1; 1.0;14.85;14.850 
+Message émis SFR Texto;SMS;1; 1.0;0.00;0.000 
+Remises sur Consommations;Autres;1; 1.0;-0.10;-0.100 
+Services et Options;Abonnements;1; 1.0;-2.25;-2.250 
+Coût total de l'usage;;;;0.190000 
+Coût total avec les abonnements;;;;12.790000 
+
+Tableau de comparaison de votre usage pour;Votre classement;Votre coût par rapport à la moyenne 
+International;11 ;  -7.3  
+Autres;23 ;   2.6  
+Abonnements;40 ;  -22.3  
+Coût total (Trafic & Abonnements);39 ;-29 
+Nombres de lignes comparées;  40 
+0.00 ; 0.00 
+Votre position ; 7.000000 ; 7.000000
+20.00 ; 4.00 
+30.00 ; 5.00 
+40.00 ; 17.00 
+50.00 ; 2.00 
+60.00 ; 2.00 
+70.00 ; 1.00 
+80.00 ; 0.00 
+90.00 ; 0.00 
+100.00 ; 0.00 
+110.00 ; 1.00 
+120.00 ; 1.00 
+130.00 ; 0.00 
+140.00 ; 0.00 
+150.00 ; 0.00 
+160.00 ; 0.00 
+170.00 ; 0.00 
+180.00 ; 0.00 
+190.00 ; 0.00 
+200.00 ; 0.00 
+210.00 ; 0.00 
+220.00 ; 0.00 
+230.00 ; 0.00 
+240.00 ; 0.00 
+250.00 ; 0.00 
+260.00 ; 0.00 
+270.00 ; 0.00 
+280.00 ; 0.00 
+300.00 ; 0.00 
+3000.00 ; 0.00 
+  
+Détails des appels 
+Type de trafic;Type d'appel;Destination / réseau visité;Date;Numéro composé;Unités;Coût 
+International;Appel vers l'étranger ou les DOM-TOM;- DEU; 01/06/2015 09:13:00;496819494xxxx;0.61667;0.25;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 02/06/2015 13:55:00;3247552xxxx;0.1;0.04;02;06;15 
+SMS;Message émis SFR Texto;- -; 18/06/2015 11:20:00;060794xxxx;1;0;18;06;15 
+National;Appel vers un portable;- -; 30/05/2015 13:06:00;061692xxxx;0.55;0;30;05;15 
+National;Appel vers un portable;- -; 02/06/2015 14:34:00;067119xxxx;0.31667;0;02;06;15 
+National;Appel vers un portable;- -; 02/06/2015 14:46:00;067119xxxx;0.25;0;02;06;15 
+National;Appel vers un portable;- -; 03/06/2015 13:56:00;062054xxxx;0.48333;0;03;06;15 
+National;Appel vers un portable;- -; 05/06/2015 12:59:00;067190xxxx;3.75;0;05;06;15 
+National;Appel vers un portable;- -; 08/06/2015 15:21:00;064435xxxx;3.5333;0;08;06;15 
+National;Appel vers un portable;- -; 10/06/2015 19:59:00;061692xxxx;0.066667;0;10;06;15 
+National;Appel vers un portable;- -; 11/06/2015 11:17:00;061692xxxx;0.05;0;11;06;15 
+National;Appel vers un portable;- -; 11/06/2015 11:28:00;062004xxxx;10.1833;0;11;06;15 
+National;Appel vers un portable;- -; 11/06/2015 17:54:00;062004xxxx;1.1667;0;11;06;15 
+National;Appel vers un portable;- -; 20/06/2015 18:37:00;067708xxxx;0.18333;0;20;06;15 
+National;Appel vers un portable;- -; 23/06/2015 10:48:00;068113xxxx;0.46667;0;23;06;15 
+National;Appel vers un portable;- -; 25/06/2015 20:18:00;060794xxxx;0.96667;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 20:19:00;067157xxxx;5.25;0;25;06;15 
+National;Appel vers un portable;- -; 27/06/2015 19:48:00;062004xxxx;7.15;0;27;06;15 
+National;Appel vers tél. fixe en France;- -; 02/06/2015 14:12:00;032089xxxx;1.65;0;02;06;15 
+National;Appel vers tél. fixe en France;- -; 02/06/2015 14:21:00;014050xxxx;2.7;0;02;06;15 
+National;Appel vers tél. fixe en France;- -; 02/06/2015 14:31:00;023566xxxx;1.7833;0;02;06;15 
+National;Appel vers tél. fixe en France;- -; 02/06/2015 14:47:00;032089xxxx;0.86667;0;02;06;15 
+National;Appel vers tél. fixe en France;- -; 05/06/2015 11:34:00;014657xxxx;0.86667;0;05;06;15 
+National;Appel vers tél. fixe en France;- -; 08/06/2015 11:05:00;047633xxxx;1.5167;0;08;06;15 
+National;Appel vers tél. fixe en France;- -; 11/06/2015 20:02:00;054676xxxx;1.65;0;11;06;15 
+National;Appel vers tél. fixe en France;- -; 26/06/2015 18:59:00;014657xxxx;1.1;0;26;06;15 
+National;Appel interne numéro court;- -; 04/06/2015 09:28:00;65588306202xxxx;0.93333;0;04;06;15 
+National;Appel interne numéro court;- -; 08/06/2015 11:37:00;015345xxxx;0.083333;0;08;06;15 
+National;Appel interne numéro court;- -; 08/06/2015 11:40:00;015345xxxx;0.66667;0;08;06;15 
+National;Appel interne numéro court;- -; 10/06/2015 09:21:00;3362028xxxx;0.9;0;10;06;15 
+National;Appel interne numéro court;- -; 26/06/2015 14:44:00;3361127xxxx;2.6833;0;26;06;15 
+National;Appel vers un portable;- -; 06/06/2015 12:56:00;061965xxxx;49.6;0;06;06;15 
+National;Appel vers un portable;- -; 07/06/2015 12:18:00;061965xxxx;8.2;0;07;06;15 
+National;Appel vers un portable;- -; 07/06/2015 12:26:00;061965xxxx;2.25;0;07;06;15 
+National;Appel vers un portable;- -; 18/06/2015 17:25:00;061351xxxx;1.6667;0;18;06;15 
+National;Appel vers un portable;- -; 20/06/2015 10:33:00;061351xxxx;8.9333;0;20;06;15 
+National;Appel vers un portable;- -; 20/06/2015 17:55:00;061351xxxx;0.7;0;20;06;15 
+Autres;Remises sur Consommations;; ;No Number;1;-0.1;;; 
+ #Appels/Oproepen/Calls: ; 38.000000

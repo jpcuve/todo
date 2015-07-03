@@ -1,0 +1,571 @@
+Résumé de votre Coût;Type d'appel;Nombre d'appels;Unités (Min/MB/SMS);Coût;Coût / Unité ;;;;;;9.760000;54.610000;6;512;14 ;3 ;41.850;42.122;0614398572;pascal.leconte@lhoist.com;0614398572;Pascal Leconte;;;;Y;Y;FR;pascal.leconte@lhoist.com;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Histogramme Lhoist France - Trafic & Abonnements;Dépenses;Nombre d'utilisateurs;Votre position;Nombre d'utilisateurs;Vous êtes dans cette tranche;40; 
+Appel interne numéro court;National;10;22.4;0.00;0.000 
+Appel vers l'étranger ou les DOM-TOM;International;1; 0.3;0.00;0.000 
+Appel vers tél. fixe en France;National;24;221.6;0.00;0.000 
+Appel vers un N° spécial;National;17;68.9;13.07;0.190 
+Appel vers un portable;National;71;204.0;0.00;0.000 
+Appel vers un# N° spécial#;National;1; 0.0;0.10; Inf 
+Autres prestations;Abonnements;1; 1.0;0.00;0.000 
+Connexion à Internet;Data National;198;456.9;0.00;0.000 
+Ligne Mobile Smartphone International 24/7;Abonnements;1; 1.0;49.50;49.500 
+Message émis SFR Texto;SMS;172;172.0;0.00;0.000 
+Remises sur Consommations;Autres;1; 1.0;-3.41;-3.410 
+Service;SMS;2; 2.0;0.00;0.000 
+Services et Options;Abonnements;1; 1.0;-4.65;-4.650 
+Session Blackberry;Data National;15; 2.0;0.00;0.000 
+Coût total de l'usage;;;;9.760000 
+Coût total avec les abonnements;;;;54.610000 
+
+Tableau de comparaison de votre usage pour;Votre classement;Votre coût par rapport à la moyenne 
+National;2 ;  11.4  
+Autres;33 ;  -0.7  
+Abonnements;12 ;  10.0  
+Coût total (Trafic & Abonnements);6 ; 12 
+Nombres de lignes comparées;  40 
+0.00 ; 0.00 
+10.00 ; 7.00 
+20.00 ; 4.00 
+30.00 ; 5.00 
+40.00 ; 17.00 
+Votre position ; 2.000000 ; 2.000000
+60.00 ; 2.00 
+70.00 ; 1.00 
+80.00 ; 0.00 
+90.00 ; 0.00 
+100.00 ; 0.00 
+110.00 ; 1.00 
+120.00 ; 1.00 
+130.00 ; 0.00 
+140.00 ; 0.00 
+150.00 ; 0.00 
+160.00 ; 0.00 
+170.00 ; 0.00 
+180.00 ; 0.00 
+190.00 ; 0.00 
+200.00 ; 0.00 
+210.00 ; 0.00 
+220.00 ; 0.00 
+230.00 ; 0.00 
+240.00 ; 0.00 
+250.00 ; 0.00 
+260.00 ; 0.00 
+270.00 ; 0.00 
+280.00 ; 0.00 
+300.00 ; 0.00 
+3000.00 ; 0.00 
+  
+Détails des appels 
+Type de trafic;Type d'appel;Destination / réseau visité;Date;Numéro composé;Unités;Coût 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:32:00;082123xxxx;10.9833;0.99;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:32:00;082123xxxx;0;1.1;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:43:00;082123xxxx;0.31667;0.03;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:43:00;082123xxxx;0;0.09;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:44:00;082123xxxx;7.65;0.69;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:44:00;082123xxxx;0;0.77;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:54:00;082123xxxx;9.2;0.83;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 17:54:00;082123xxxx;0;0.92;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:04:00;082123xxxx;8.9667;0.81;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:04:00;082123xxxx;0;0.9;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:15:00;082123xxxx;4.2667;0.38;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:15:00;082123xxxx;0;0.43;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:20:00;082123xxxx;5.8167;0.52;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:20:00;082123xxxx;0;0.58;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:27:00;082123xxxx;1.0333;0.09;23;06;15 
+National;Appel vers un# N° spécial#;- -; 23/06/2015 18:27:00;082123xxxx;0;0.1;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:29:00;082123xxxx;20.6667;1.86;23;06;15 
+National;Appel vers un N° spécial;- -; 23/06/2015 18:29:00;082123xxxx;0;2.08;23;06;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 10:33:00;062953xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 16:09:00;067256xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 21:56:00;068744xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 21:56:00;068744xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 22:20:00;068744xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 22:25:00;068744xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 12:42:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 14:46:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 18:00:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 18:07:00;065128xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 18:07:00;069543xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 18:07:00;062112xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 18:07:00;069582xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 18:10:00;065128xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 21:54:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 22:03:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 22:15:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 22:18:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 22:22:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 30/05/2015 22:26:00;068744xxxx;1;0;30;05;15 
+SMS;Message émis SFR Texto;- -; 31/05/2015 09:38:00;068744xxxx;1;0;31;05;15 
+SMS;Message émis SFR Texto;- -; 31/05/2015 20:58:00;068744xxxx;1;0;31;05;15 
+SMS;Message émis SFR Texto;- -; 31/05/2015 20:58:00;068744xxxx;1;0;31;05;15 
+SMS;Message émis SFR Texto;- -; 31/05/2015 21:14:00;068744xxxx;1;0;31;05;15 
+SMS;Message émis SFR Texto;- -; 31/05/2015 21:14:00;068744xxxx;1;0;31;05;15 
+SMS;Message émis SFR Texto;- -; 31/05/2015 21:20:00;068744xxxx;1;0;31;05;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 10:29:00;068744xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 11:16:00;061127xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 11:17:00;061127xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 19:40:00;068744xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 19:45:00;068744xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 19:58:00;068744xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 21:05:00;068744xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 02/06/2015 08:54:00;068744xxxx;1;0;02;06;15 
+SMS;Message émis SFR Texto;- -; 02/06/2015 13:14:00;068744xxxx;1;0;02;06;15 
+SMS;Message émis SFR Texto;- -; 02/06/2015 19:33:00;068744xxxx;1;0;02;06;15 
+SMS;Message émis SFR Texto;- -; 02/06/2015 19:44:00;068744xxxx;1;0;02;06;15 
+SMS;Message émis SFR Texto;- -; 02/06/2015 19:57:00;068744xxxx;1;0;02;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 09:17:00;068744xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 09:17:00;068744xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 12:11:00;068744xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 18:47:00;069582xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 21:32:00;068744xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 22:10:00;061394xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 03/06/2015 22:10:00;061394xxxx;1;0;03;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 08:12:00;069543xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 08:12:00;069582xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 08:12:00;062112xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 08:25:00;068744xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 17:11:00;068744xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 19:03:00;065128xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 19:03:00;062112xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 19:03:00;069582xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 04/06/2015 22:39:00;068744xxxx;1;0;04;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 08:31:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 09:18:00;060398xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 09:34:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 17:34:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 17:34:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 17:34:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 18:36:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 18:36:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 19:36:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 19:46:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 05/06/2015 21:59:00;068744xxxx;1;0;05;06;15 
+SMS;Message émis SFR Texto;- -; 06/06/2015 12:15:00;068744xxxx;1;0;06;06;15 
+SMS;Message émis SFR Texto;- -; 06/06/2015 19:15:00;068744xxxx;1;0;06;06;15 
+SMS;Message émis SFR Texto;- -; 06/06/2015 19:25:00;068744xxxx;1;0;06;06;15 
+SMS;Message émis SFR Texto;- -; 06/06/2015 19:29:00;068744xxxx;1;0;06;06;15 
+SMS;Message émis SFR Texto;- -; 06/06/2015 23:00:00;068744xxxx;1;0;06;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 10:34:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 15:00:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 15:14:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 17:08:00;062112xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 17:08:00;069582xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 17:08:00;069543xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 17:08:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 19:18:00;065037xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 20:48:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 20:50:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 20:53:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 07/06/2015 21:53:00;068744xxxx;1;0;07;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 07:49:00;069582xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 07:49:00;062112xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 08:28:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 16:15:00;88xx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 18:01:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 18:01:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 18:08:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 18:37:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 18:56:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 19:28:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 08/06/2015 22:03:00;068744xxxx;1;0;08;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 08:49:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 08:49:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 08:49:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 19:24:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 19:37:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 21:17:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 09/06/2015 22:30:00;068744xxxx;1;0;09;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 07:10:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 07:17:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 07:47:00;067256xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 10:59:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 11:08:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 11:11:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 11:13:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 11:21:00;068744xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 20:13:00;062112xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 07:20:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 07:25:00;068744xxxx;1;0;11;06;15 
+SMS;Service;- -; 11/06/2015 09:37:00;361xx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 19:48:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 22:38:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 22:55:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 22:58:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 23:06:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 11/06/2015 23:08:00;068744xxxx;1;0;11;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 15:58:00;069582xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 17:13:00;068744xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 18:24:00;069582xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 19:08:00;061823xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 20:21:00;068744xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 21:19:00;068744xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 12/06/2015 23:08:00;068744xxxx;1;0;12;06;15 
+SMS;Message émis SFR Texto;- -; 13/06/2015 14:08:00;068744xxxx;1;0;13;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 01:11:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 11:58:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 14:16:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:26:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:26:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:26:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:32:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:39:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:39:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 21:27:00;068744xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 15/06/2015 07:34:00;068744xxxx;1;0;15;06;15 
+SMS;Message émis SFR Texto;- -; 16/06/2015 07:12:00;068744xxxx;1;0;16;06;15 
+SMS;Message émis SFR Texto;- -; 16/06/2015 10:13:00;063331xxxx;1;0;16;06;15 
+SMS;Message émis SFR Texto;- -; 16/06/2015 18:17:00;068744xxxx;1;0;16;06;15 
+SMS;Message émis SFR Texto;- -; 16/06/2015 19:14:00;068744xxxx;1;0;16;06;15 
+SMS;Message émis SFR Texto;- -; 16/06/2015 19:51:00;068744xxxx;1;0;16;06;15 
+SMS;Message émis SFR Texto;- -; 16/06/2015 22:27:00;068744xxxx;1;0;16;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 07:14:00;068744xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 09:13:00;067455xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 11:02:00;069582xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 11:04:00;069582xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 18:02:00;068744xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 18:24:00;068744xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 19:36:00;068744xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 22:25:00;068744xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 18/06/2015 07:55:00;068744xxxx;1;0;18;06;15 
+SMS;Message émis SFR Texto;- -; 18/06/2015 10:13:00;068744xxxx;1;0;18;06;15 
+SMS;Message émis SFR Texto;- -; 18/06/2015 10:18:00;068744xxxx;1;0;18;06;15 
+SMS;Message émis SFR Texto;- -; 19/06/2015 10:19:00;069582xxxx;1;0;19;06;15 
+SMS;Message émis SFR Texto;- -; 19/06/2015 21:24:00;061823xxxx;1;0;19;06;15 
+SMS;Message émis SFR Texto;- -; 19/06/2015 21:24:00;061823xxxx;1;0;19;06;15 
+SMS;Message émis SFR Texto;- -; 19/06/2015 21:24:00;061823xxxx;1;0;19;06;15 
+SMS;Message émis SFR Texto;- -; 19/06/2015 21:26:00;068744xxxx;1;0;19;06;15 
+SMS;Message émis SFR Texto;- -; 19/06/2015 21:26:00;068744xxxx;1;0;19;06;15 
+SMS;Message émis SFR Texto;- -; 20/06/2015 09:55:00;068744xxxx;1;0;20;06;15 
+SMS;Message émis SFR Texto;- -; 20/06/2015 09:55:00;068744xxxx;1;0;20;06;15 
+SMS;Message émis SFR Texto;- -; 20/06/2015 09:55:00;068744xxxx;1;0;20;06;15 
+SMS;Message émis SFR Texto;- -; 24/06/2015 10:52:00;069582xxxx;1;0;24;06;15 
+SMS;Message émis SFR Texto;- -; 24/06/2015 10:52:00;069582xxxx;1;0;24;06;15 
+SMS;Service;- -; 24/06/2015 17:02:00;101xx;1;0;24;06;15 
+SMS;Message émis SFR Texto;- -; 25/06/2015 18:09:00;069543xxxx;1;0;25;06;15 
+SMS;Message émis SFR Texto;- -; 25/06/2015 20:05:00;069543xxxx;1;0;25;06;15 
+SMS;Message émis SFR Texto;- -; 25/06/2015 20:15:00;069543xxxx;1;0;25;06;15 
+SMS;Message émis SFR Texto;- -; 26/06/2015 12:38:00;069543xxxx;1;0;26;06;15 
+SMS;Message émis SFR Texto;- -; 26/06/2015 14:31:00;062112xxxx;1;0;26;06;15 
+SMS;Message émis SFR Texto;- -; 26/06/2015 18:17:00;061823xxxx;1;0;26;06;15 
+SMS;Message émis SFR Texto;- -; 27/06/2015 15:32:00;068744xxxx;1;0;27;06;15 
+SMS;Message émis SFR Texto;- -; 27/06/2015 15:55:00;068744xxxx;1;0;27;06;15 
+National;Appel vers un portable;- -; 29/05/2015 22:01:00;068744xxxx;7.25;0;29;05;15 
+National;Appel vers un portable;- -; 30/05/2015 11:56:00;062112xxxx;1.1333;0;30;05;15 
+National;Appel vers un portable;- -; 30/05/2015 18:26:00;068744xxxx;0.91667;0;30;05;15 
+National;Appel vers un portable;- -; 03/06/2015 17:41:00;069582xxxx;1.2;0;03;06;15 
+National;Appel vers un portable;- -; 07/06/2015 20:26:00;068744xxxx;5.2667;0;07;06;15 
+National;Appel vers un portable;- -; 08/06/2015 21:59:00;068744xxxx;0.48333;0;08;06;15 
+National;Appel vers un portable;- -; 10/06/2015 12:07:00;067506xxxx;0.81667;0;10;06;15 
+National;Appel vers un portable;- -; 10/06/2015 12:09:00;067620xxxx;4.0833;0;10;06;15 
+National;Appel vers un portable;- -; 10/06/2015 21:53:00;068744xxxx;15.4;0;10;06;15 
+National;Appel vers un portable;- -; 12/06/2015 09:06:00;062354xxxx;0.93333;0;12;06;15 
+National;Appel vers un portable;- -; 13/06/2015 10:59:00;069582xxxx;0.45;0;13;06;15 
+National;Appel vers un portable;- -; 13/06/2015 11:02:00;069582xxxx;0.38333;0;13;06;15 
+National;Appel vers un portable;- -; 13/06/2015 13:22:00;068744xxxx;20;0;13;06;15 
+National;Appel vers un portable;- -; 13/06/2015 13:45:00;068744xxxx;5.4833;0;13;06;15 
+National;Appel vers un portable;- -; 14/06/2015 20:40:00;068744xxxx;1.95;0;14;06;15 
+National;Appel vers un portable;- -; 16/06/2015 10:26:00;068680xxxx;1.0833;0;16;06;15 
+National;Appel vers un portable;- -; 16/06/2015 11:57:00;068680xxxx;0.51667;0;16;06;15 
+National;Appel vers un portable;- -; 16/06/2015 22:56:00;065128xxxx;0.1;0;16;06;15 
+National;Appel vers un portable;- -; 16/06/2015 22:57:00;065128xxxx;0.083333;0;16;06;15 
+National;Appel vers un portable;- -; 16/06/2015 22:58:00;065128xxxx;0.13333;0;16;06;15 
+National;Appel vers un portable;- -; 17/06/2015 17:14:00;067506xxxx;4.6667;0;17;06;15 
+National;Appel vers un portable;- -; 17/06/2015 22:56:00;068744xxxx;15.5833;0;17;06;15 
+National;Appel vers un portable;- -; 19/06/2015 18:08:00;062112xxxx;0.4;0;19;06;15 
+National;Appel vers un portable;- -; 20/06/2015 16:38:00;069543xxxx;0.51667;0;20;06;15 
+National;Appel vers un portable;- -; 22/06/2015 19:54:00;062112xxxx;0.066667;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 19:59:00;069543xxxx;0.083333;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 20:00:00;062112xxxx;0.05;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 20:00:00;065128xxxx;0.15;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 20:01:00;062112xxxx;3.5167;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 21:22:00;068744xxxx;2.4167;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 22:57:00;068744xxxx;0.26667;0;22;06;15 
+National;Appel vers un portable;- -; 23/06/2015 10:55:00;066333xxxx;4.7167;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 16:37:00;062112xxxx;0.56667;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 18:14:00;069582xxxx;1.3833;0;23;06;15 
+National;Appel vers un portable;- -; 24/06/2015 21:34:00;068744xxxx;12.6333;0;24;06;15 
+National;Appel vers un portable;- -; 24/06/2015 22:10:00;069543xxxx;0.1;0;24;06;15 
+National;Appel vers un portable;- -; 25/06/2015 21:47:00;069543xxxx;5.2833;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 21:54:00;068744xxxx;0.48333;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 21:59:00;068744xxxx;3;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 22:05:00;069543xxxx;1.0833;0;25;06;15 
+National;Appel vers un portable;- -; 26/06/2015 10:35:00;062830xxxx;0.53333;0;26;06;15 
+National;Appel vers un portable;- -; 26/06/2015 11:11:00;069543xxxx;0.4;0;26;06;15 
+National;Appel vers un portable;- -; 26/06/2015 11:12:00;062830xxxx;5.0167;0;26;06;15 
+National;Appel vers un portable;- -; 28/06/2015 21:17:00;068744xxxx;27.3;0;28;06;15 
+Data National;Session Blackberry;- -; 29/05/2015 13:05:00;x;0.06;0;29;05;15 
+Data National;Session Blackberry;- -; 29/05/2015 17:37:00;x;0.034;0;29;05;15 
+Data National;Session Blackberry;- -; 30/05/2015 17:32:00;x;0.017;0;30;05;15 
+Data National;Session Blackberry;- -; 31/05/2015 10:30:00;x;0.922;0;31;05;15 
+Data National;Session Blackberry;- -; 01/06/2015 06:44:00;x;0.174;0;01;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 06:39:00;x;0.146;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 18:37:00;x;0.036;0;02;06;15 
+Data National;Session Blackberry;- -; 03/06/2015 09:34:00;x;0.132;0;03;06;15 
+Data National;Session Blackberry;- -; 03/06/2015 18:55:00;x;0.167;0;03;06;15 
+Data National;Session Blackberry;- -; 04/06/2015 18:50:00;x;0.003;0;04;06;15 
+Data National;Session Blackberry;- -; 04/06/2015 19:39:00;x;0.15;0;04;06;15 
+Data National;Session Blackberry;- -; 05/06/2015 19:34:00;x;0.028;0;05;06;15 
+Data National;Session Blackberry;- -; 06/06/2015 19:29:00;x;0.024;0;06;06;15 
+Data National;Session Blackberry;- -; 07/06/2015 19:24:00;x;0.02;0;07;06;15 
+Data National;Session Blackberry;- -; 08/06/2015 08:12:00;x;0.064;0;08;06;15 
+Data National;Connexion à Internet;- -; 08/06/2015 16:03:00;x;0.009;0;08;06;15 
+Data National;Connexion à Internet;- -; 08/06/2015 16:41:00;x;0.01;0;08;06;15 
+Data National;Connexion à Internet;- -; 08/06/2015 17:22:00;x;0.008;0;08;06;15 
+Data National;Connexion à Internet;- -; 08/06/2015 17:48:00;x;1.138;0;08;06;15 
+Data National;Connexion à Internet;- -; 08/06/2015 19:27:00;x;0.745;0;08;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 06:50:00;x;0.062;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 06:55:00;x;0.51;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 08:55:00;x;0.021;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 09:10:00;x;0.007;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 09:11:00;x;0.008;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 09:23:00;x;1.44;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 12:23:00;x;0.008;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 12:38:00;x;0.016;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 12:40:00;x;0.128;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 12:47:00;x;0.118;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 12:58:00;x;0.056;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 13:07:00;x;0.007;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 13:09:00;x;0.009;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 13:41:00;x;0.216;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 16:08:00;x;1.985;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 16:24:00;x;0.141;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 16:42:00;x;0.188;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 18:08:00;x;0.757;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 19:00:00;x;0.015;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 19:05:00;x;0.006;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 19:06:00;x;0.635;0;09;06;15 
+Data National;Connexion à Internet;- -; 09/06/2015 21:14:00;x;2.223;0;09;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 06:08:00;x;0.016;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 06:09:00;x;0.306;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 06:58:00;x;0.022;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 07:40:00;x;0.224;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 07:53:00;x;0.009;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 07:54:00;x;0.015;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 07:59:00;x;0.009;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 08:03:00;x;1.258;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 10:45:00;x;28.788;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 17:13:00;x;0.021;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 17:26:00;x;0.93;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 18:38:00;x;0.193;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 18:59:00;x;0.374;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 19:49:00;x;2.309;0;10;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 06:27:00;x;0.167;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 07:02:00;x;0.013;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 07:05:00;x;0.588;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 07:49:00;x;0.173;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 07:59:00;x;0.316;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 09:02:00;x;11.881;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 14:32:00;x;3.093;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 16:11:00;x;0.021;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 16:20:00;x;0.074;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 16:27:00;x;0.674;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 17:48:00;x;0.043;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 17:50:00;x;0.604;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 18:07:00;x;2.044;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 18:46:00;x;0.282;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 19:39:00;x;0.807;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 21:44:00;x;0.122;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 22:00:00;x;0.193;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 22:07:00;x;7.934;0;11;06;15 
+Data National;Connexion à Internet;- -; 12/06/2015 08:04:00;x;7.536;0;12;06;15 
+Data National;Connexion à Internet;- -; 12/06/2015 19:03:00;x;8.569;0;12;06;15 
+Data National;Connexion à Internet;- -; 13/06/2015 16:00:00;x;0.058;0;13;06;15 
+Data National;Connexion à Internet;- -; 13/06/2015 16:08:00;x;1.135;0;13;06;15 
+Data National;Connexion à Internet;- -; 13/06/2015 18:08:00;x;25.312;0;13;06;15 
+Data National;Connexion à Internet;- -; 13/06/2015 20:04:00;x;0.5;0;13;06;15 
+Data National;Connexion à Internet;- -; 13/06/2015 21:49:00;x;0.177;0;13;06;15 
+Data National;Connexion à Internet;- -; 13/06/2015 22:10:00;x;2.391;0;13;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 00:31:00;x;0.018;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 00:38:00;x;0.036;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 00:40:00;x;2.359;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 12:21:00;x;1.671;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 14:33:00;x;0.012;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 14:34:00;x;0.009;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 14:37:00;x;0.016;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 14:38:00;x;0.626;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 16:01:00;x;0.017;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 16:02:00;x;0.01;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 16:07:00;x;3.57;0;14;06;15 
+Data National;Connexion à Internet;- -; 14/06/2015 21:22:00;x;3.104;0;14;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 09:00:00;x;0.021;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 09:00:00;x;0.584;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 09:40:00;x;0.31;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 09:51:00;x;0.131;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 09:57:00;x;1.309;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 12:11:00;x;0.031;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 12:30:00;x;6.556;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 17:01:00;x;0.047;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 17:05:00;x;0.049;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 17:10:00;x;2.319;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 19:58:00;x;0.339;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 20:51:00;x;0.331;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 23:11:00;x;3.658;0;15;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 08:51:00;x;2.825;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 12:06:00;x;0.098;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 12:20:00;x;3.013;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 12:52:00;x;0.125;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 12:53:00;x;0.646;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 13:22:00;x;1.861;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 18:23:00;x;2.693;0;16;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 00:03:00;x;0.59;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 06:28:00;x;0.25;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 07:13:00;x;0.07;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 07:24:00;x;0.764;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 08:54:00;x;0.026;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 09:09:00;x;0.085;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 09:18:00;x;2.233;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 12:39:00;x;0.08;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:23:00;x;0.009;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:25:00;x;0.022;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:41:00;x;0.017;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:45:00;x;0.173;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:55:00;x;3.993;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 16:58:00;x;4.25;0;17;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 08:52:00;x;0.015;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 08:53:00;x;0.021;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 09:01:00;x;0.344;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 09:05:00;x;1.499;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 09:22:00;x;1.378;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 12:46:00;x;9.644;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 13:34:00;x;0.018;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 13:45:00;x;0.082;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 13:57:00;x;0.141;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 14:10:00;x;0.014;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 14:11:00;x;0.072;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 14:51:00;x;0.401;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 15:07:00;x;2.447;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 17:47:00;x;0.366;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 18:33:00;x;29.023;0;18;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 08:12:00;x;0.392;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 09:14:00;x;2.01;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 12:16:00;x;2.995;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 16:38:00;x;0.184;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 17:31:00;x;2.771;0;19;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 07:41:00;x;12.809;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 17:46:00;x;0.561;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 18:36:00;x;0.313;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 19:07:00;x;0.037;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 19:41:00;x;50.216;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 20:35:00;x;24.47;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 22:24:00;x;0.024;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 22:45:00;x;0.17;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 22:58:00;x;0.02;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 23:12:00;x;0.018;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 23:25:00;x;0.171;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 23:39:00;x;0.014;0;20;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 23:52:00;x;0.149;0;20;06;15 
+Data National;Connexion à Internet;- -; 21/06/2015 00:18:00;x;0.021;0;21;06;15 
+Data National;Connexion à Internet;- -; 21/06/2015 00:31:00;x;0.015;0;21;06;15 
+Data National;Connexion à Internet;- -; 21/06/2015 00:42:00;x;0.013;0;21;06;15 
+Data National;Connexion à Internet;- -; 21/06/2015 00:43:00;x;7.251;0;21;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 00:38:00;x;1.186;0;22;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 06:02:00;x;0.271;0;22;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 08:27:00;x;17.194;0;22;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 19:52:00;x;0.641;0;22;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 21:00:00;x;3.016;0;22;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 05:50:00;x;0.642;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 07:10:00;x;0.156;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 07:53:00;x;0.51;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 08:36:00;x;3.51;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 16:34:00;x;1.173;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 16:53:00;x;0.079;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 17:10:00;x;0.009;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 17:12:00;x;6.203;0;23;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 10:10:00;x;0.152;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 10:21:00;x;0.168;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 10:40:00;x;0.242;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 10:48:00;x;0.009;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 10:50:00;x;0.455;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 12:11:00;x;0.063;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 12:15:00;x;0.054;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 12:43:00;x;2.555;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 16:09:00;x;0.167;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 16:24:00;x;4.076;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 18:18:00;x;0.022;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 18:27:00;x;0.213;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 18:55:00;x;11.283;0;24;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 11:11:00;x;10.369;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 15:49:00;x;10.633;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 18:18:00;x;0.03;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 18:20:00;x;7.595;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 19:48:00;x;0.412;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 20:48:00;x;0.024;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 20:55:00;x;21.912;0;25;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 13:20:00;x;0.03;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 13:33:00;x;0.504;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 13:59:00;x;0.037;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 14:00:00;x;1.3;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 15:29:00;x;2.938;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 17:31:00;x;0.087;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 17:43:00;x;1.616;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 21:31:00;x;1.573;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 22:57:00;x;10.669;0;26;06;15 
+Data National;Connexion à Internet;- -; 27/06/2015 21:16:00;x;1.912;0;27;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 07:25:00;x;2.067;0;28;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 17:15:00;x;0.154;0;28;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 18:06:00;x;0.03;0;28;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 18:20:00;x;0.279;0;28;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 19:02:00;x;8.036;0;28;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 25/06/2015 10:48:00;326789xxxx;0.25;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 30/05/2015 18:13:00;024353xxxx;11.8333;0;30;05;15 
+National;Appel vers tél. fixe en France;- -; 01/06/2015 18:20:00;024353xxxx;11.15;0;01;06;15 
+National;Appel vers tél. fixe en France;- -; 01/06/2015 18:32:00;024353xxxx;18.6833;0;01;06;15 
+National;Appel vers tél. fixe en France;- -; 03/06/2015 17:53:00;024353xxxx;1.5;0;03;06;15 
+National;Appel vers tél. fixe en France;- -; 03/06/2015 18:32:00;024353xxxx;13.4833;0;03;06;15 
+National;Appel vers tél. fixe en France;- -; 04/06/2015 08:55:00;055340xxxx;26.05;0;04;06;15 
+National;Appel vers tél. fixe en France;- -; 09/06/2015 17:09:00;014960xxxx;1.05;0;09;06;15 
+National;Appel vers tél. fixe en France;- -; 11/06/2015 10:17:00;047627xxxx;2.3;0;11;06;15 
+National;Appel vers tél. fixe en France;- -; 11/06/2015 16:00:00;047627xxxx;0.13333;0;11;06;15 
+National;Appel vers tél. fixe en France;- -; 12/06/2015 16:10:00;024353xxxx;8.3;0;12;06;15 
+National;Appel vers tél. fixe en France;- -; 12/06/2015 16:19:00;024353xxxx;15.3667;0;12;06;15 
+National;Appel vers tél. fixe en France;- -; 16/06/2015 11:20:00;014960xxxx;2.65;0;16;06;15 
+National;Appel vers tél. fixe en France;- -; 16/06/2015 11:58:00;013477xxxx;0.18333;0;16;06;15 
+National;Appel vers tél. fixe en France;- -; 18/06/2015 17:21:00;016992xxxx;2.3667;0;18;06;15 
+National;Appel vers tél. fixe en France;- -; 18/06/2015 17:53:00;038661xxxx;18.3;0;18;06;15 
+National;Appel vers tél. fixe en France;- -; 22/06/2015 20:06:00;024353xxxx;1.95;0;22;06;15 
+National;Appel vers tél. fixe en France;- -; 22/06/2015 21:01:00;024353xxxx;17.4333;0;22;06;15 
+National;Appel vers tél. fixe en France;- -; 23/06/2015 19:21:00;014960xxxx;24.4;0;23;06;15 
+National;Appel vers tél. fixe en France;- -; 23/06/2015 19:46:00;014960xxxx;5.2333;0;23;06;15 
+National;Appel vers tél. fixe en France;- -; 24/06/2015 22:11:00;095275xxxx;3.8167;0;24;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 17:44:00;055340xxxx;2.85;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 21:44:00;046764xxxx;1.9667;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 22:02:00;046764xxxx;1.95;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 26/06/2015 16:22:00;024353xxxx;28.6333;0;26;06;15 
+National;Appel interne numéro court;- -; 04/06/2015 11:04:00;3362028xxxx;3.9833;0;04;06;15 
+National;Appel interne numéro court;- -; 05/06/2015 16:47:00;3361406xxxx;2.55;0;05;06;15 
+National;Appel interne numéro court;- -; 11/06/2015 15:57:00;3361127xxxx;1.1833;0;11;06;15 
+National;Appel interne numéro court;- -; 12/06/2015 12:25:00;3315345xxxx;0.05;0;12;06;15 
+National;Appel interne numéro court;- -; 16/06/2015 12:12:00;3362028xxxx;0.36667;0;16;06;15 
+National;Appel interne numéro court;- -; 16/06/2015 13:50:00;3362028xxxx;0.083333;0;16;06;15 
+National;Appel interne numéro court;- -; 17/06/2015 09:31:00;3332987xxxx;0.31667;0;17;06;15 
+National;Appel interne numéro court;- -; 22/06/2015 13:58:00;061127xxxx;9.3667;0;22;06;15 
+National;Appel interne numéro court;- -; 26/06/2015 08:55:00;061406xxxx;3.7667;0;26;06;15 
+National;Appel interne numéro court;- -; 26/06/2015 10:41:00;3360398xxxx;0.75;0;26;06;15 
+National;Appel vers un portable;- -; 05/06/2015 17:05:00;067256xxxx;13.9333;0;05;06;15 
+National;Appel vers un portable;- -; 10/06/2015 18:04:00;067455xxxx;1.0667;0;10;06;15 
+National;Appel vers un portable;- -; 10/06/2015 18:33:00;077770xxxx;0.78333;0;10;06;15 
+National;Appel vers un portable;- -; 11/06/2015 10:15:00;077770xxxx;0.1;0;11;06;15 
+National;Appel vers un portable;- -; 11/06/2015 10:16:00;060764xxxx;0.63333;0;11;06;15 
+National;Appel vers un portable;- -; 11/06/2015 10:27:00;067096xxxx;0.88333;0;11;06;15 
+National;Appel vers un portable;- -; 12/06/2015 09:08:00;067256xxxx;0.71667;0;12;06;15 
+National;Appel vers un portable;- -; 12/06/2015 18:14:00;067256xxxx;0.25;0;12;06;15 
+National;Appel vers un portable;- -; 12/06/2015 18:15:00;067256xxxx;0.11667;0;12;06;15 
+National;Appel vers un portable;- -; 12/06/2015 18:15:00;067256xxxx;0.31667;0;12;06;15 
+National;Appel vers un portable;- -; 12/06/2015 18:18:00;067256xxxx;0.15;0;12;06;15 
+National;Appel vers un portable;- -; 12/06/2015 19:49:00;067256xxxx;0.41667;0;12;06;15 
+National;Appel vers un portable;- -; 15/06/2015 10:39:00;062802xxxx;0.43333;0;15;06;15 
+National;Appel vers un portable;- -; 15/06/2015 17:53:00;067455xxxx;1.5667;0;15;06;15 
+National;Appel vers un portable;- -; 15/06/2015 18:57:00;060725xxxx;0.45;0;15;06;15 
+National;Appel vers un portable;- -; 16/06/2015 18:29:00;067455xxxx;0.45;0;16;06;15 
+National;Appel vers un portable;- -; 16/06/2015 18:38:00;067455xxxx;0.11667;0;16;06;15 
+National;Appel vers un portable;- -; 18/06/2015 14:58:00;067455xxxx;0.86667;0;18;06;15 
+National;Appel vers un portable;- -; 18/06/2015 15:57:00;067455xxxx;0.91667;0;18;06;15 
+National;Appel vers un portable;- -; 22/06/2015 08:41:00;067256xxxx;1.1167;0;22;06;15 
+National;Appel vers un portable;- -; 23/06/2015 09:21:00;067455xxxx;0.48333;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 09:24:00;067455xxxx;0.38333;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 09:33:00;067455xxxx;0.33333;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 16:36:00;067455xxxx;0.41667;0;23;06;15 
+National;Appel vers un portable;- -; 25/06/2015 10:09:00;060764xxxx;2.3167;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 17:48:00;067256xxxx;14.05;0;25;06;15 
+National;Appel vers un portable;- -; 26/06/2015 09:27:00;067455xxxx;2.8333;0;26;06;15 
+Autres;Remises sur Consommations;; ;No Number;1;-3.41;;; 
+ #Appels/Oproepen/Calls: ; 512.000000

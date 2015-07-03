@@ -1,0 +1,369 @@
+Résumé de votre Coût;Type d'appel;Nombre d'appels;Unités (Min/MB/SMS);Coût;Coût / Unité ;;;;;;0.000000;44.850000;17;308;18 ;1 ;41.850;42.122;0627702787;patrick.seigneur@lhoist.com;0627702787;Patrick Seigneur;;;;Y;Y;FR;patrick.seigneur@lhoist.com;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Histogramme Lhoist France - Trafic & Abonnements;Dépenses;Nombre d'utilisateurs;Votre position;Nombre d'utilisateurs;Vous êtes dans cette tranche;40; 
+Appel interne numéro court;National;3; 5.4;0.00;0.000 
+Appel reçu en Europe Régl DOM;Communications à l'étranger;15;66.8;0.00;0.000 
+Appel vers l'étranger ou les DOM-TOM;International;31;91.7;0.00;0.000 
+Appel vers tél. fixe en France;National;16;25.9;0.00;0.000 
+Appel vers un portable;National;45;91.1;0.00;0.000 
+Appel émis depuis Europe Régl DOM;Communications à l'étranger;48;95.7;0.00;0.000 
+Autres prestations;Abonnements;1; 1.0;0.00;0.000 
+Connexion à Internet;Data National;65;378.0;0.00;0.000 
+Conso. Ajustable Data EU/DOM/AMN;Data International;6; 0.0;0.00;0.000 
+Envoi de Texto depuis l'Europe Régl DOM;SMS;9; 9.0;0.00;0.000 
+Ligne Mobile Smartphone International 24/7;Abonnements;1; 1.0;49.50;49.500 
+Message émis SFR Texto;SMS;23;23.0;0.00;0.000 
+Remises sur Consommations;Autres;1; 1.0;0.00;0.000 
+Service Vocal depuis Europe Régl DOM;Communications à l'étranger;5; 2.6;0.00;0.000 
+Services et Options;Abonnements;1; 1.0;-4.65;-4.650 
+Session Blackberry;Data National;39; 0.5;0.00;0.000 
+Session web GPRS;Data National;1; 0.7;0.00;0.000 
+Texto émis vers l'étranger ou DOM-TOM;SMS;1; 1.0;0.00;0.000 
+Coût total de l'usage;;;;0.000000 
+Coût total avec les abonnements;;;;44.850000 
+
+Tableau de comparaison de votre usage pour;Votre classement;Votre coût par rapport à la moyenne 
+Abonnements;12 ;  10.0  
+Coût total (Trafic & Abonnements);17 ;  3 
+Nombres de lignes comparées;  40 
+0.00 ; 0.00 
+10.00 ; 7.00 
+20.00 ; 4.00 
+30.00 ; 5.00 
+Votre position ; 17.000000 ; 17.000000
+50.00 ; 2.00 
+60.00 ; 2.00 
+70.00 ; 1.00 
+80.00 ; 0.00 
+90.00 ; 0.00 
+100.00 ; 0.00 
+110.00 ; 1.00 
+120.00 ; 1.00 
+130.00 ; 0.00 
+140.00 ; 0.00 
+150.00 ; 0.00 
+160.00 ; 0.00 
+170.00 ; 0.00 
+180.00 ; 0.00 
+190.00 ; 0.00 
+200.00 ; 0.00 
+210.00 ; 0.00 
+220.00 ; 0.00 
+230.00 ; 0.00 
+240.00 ; 0.00 
+250.00 ; 0.00 
+260.00 ; 0.00 
+270.00 ; 0.00 
+280.00 ; 0.00 
+300.00 ; 0.00 
+3000.00 ; 0.00 
+  
+Détails des appels 
+Type de trafic;Type d'appel;Destination / réseau visité;Date;Numéro composé;Unités;Coût 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 04/06/2015 09:26:00;x;0.96667;0;04;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 04/06/2015 09:35:00;x;4.4333;0;04;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 04/06/2015 10:06:00;x;4.1167;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 04/06/2015 10:27:00;03332180xxxx;6.7667;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 04/06/2015 10:44:00;03247984xxxx;0.5;0;04;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 04/06/2015 11:05:00;x;1.1667;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 04/06/2015 13:12:00;03368559xxxx;4.45;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 04/06/2015 13:17:00;03364550xxxx;0.5;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 04/06/2015 13:18:00;03364550xxxx;0.5;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 04/06/2015 13:29:00;03332180xxxx;0.88333;0;04;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 04/06/2015 13:36:00;03368559xxxx;0.5;0;04;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 04/06/2015 13:50:00;x;3.7833;0;04;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 05/06/2015 09:15:00;x;4.4167;0;05;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 05/06/2015 09:37:00;x;1.0667;0;05;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 05/06/2015 09:48:00;03368559xxxx;0.5;0;05;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 05/06/2015 13:47:00;03247864xxxx;0.5;0;05;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 05/06/2015 13:49:00;03368559xxxx;2.9667;0;05;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 05/06/2015 13:50:00;x;3.8833;0;05;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 05/06/2015 14:08:00;03368559xxxx;2.6167;0;05;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 05/06/2015 14:54:00;x;2.4;0;05;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 05/06/2015 14:57:00;x;0.5;0;05;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF DEU; 08/06/2015 16:55:00;049173702xxxx;3.55;0;08;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 08/06/2015 17:09:00;03315345xxxx;1.4167;0;08;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 08/06/2015 17:49:00;03361065xxxx;6.4333;0;08;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 08/06/2015 19:02:00;03367006xxxx;0.5;0;08;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 08/06/2015 19:02:00;03367006xxxx;15.0167;0;08;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 08/06/2015 20:01:00;03367399xxxx;1.2;0;08;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 09/06/2015 12:02:00;03247563xxxx;4.6667;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:22:00;03368559xxxx;0.91667;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:29:00;03361065xxxx;0.91667;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:49:00;03368559xxxx;0.5;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:49:00;03368559xxxx;0.91667;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:54:00;03368559xxxx;0.5;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:54:00;03368559xxxx;0.5;0;09;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 09/06/2015 12:56:00;03368559xxxx;0.5;0;09;06;15 
+Communications à l'étranger;Service Vocal depuis Europe Régl DOM;BEL-VF -; 12/06/2015 07:54:00;01xx;0.5;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 12/06/2015 08:34:00;0327181xxxx;0.96667;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 12/06/2015 09:26:00;03332110xxxx;0.53333;0;12;06;15 
+Communications à l'étranger;Service Vocal depuis Europe Régl DOM;BEL-VF -; 12/06/2015 09:50:00;01xx;0.5;0;12;06;15 
+Communications à l'étranger;Service Vocal depuis Europe Régl DOM;BEL-VF -; 12/06/2015 10:30:00;01xx;0.56667;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 12/06/2015 10:31:00;03332110xxxx;0.71667;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 12/06/2015 10:58:00;03362697xxxx;0.5;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 12/06/2015 10:58:00;03362697xxxx;0.5;0;12;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 12/06/2015 11:00:00;x;20.2667;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 12/06/2015 11:22:00;03332110xxxx;4.0667;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 12/06/2015 11:28:00;0327181xxxx;1.25;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 12/06/2015 11:29:00;0327181xxxx;2.3667;0;12;06;15 
+Communications à l'étranger;Service Vocal depuis Europe Régl DOM;BEL-VF -; 12/06/2015 11:32:00;01xx;0.5;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 12/06/2015 11:33:00;0327181xxxx;1.5167;0;12;06;15 
+Communications à l'étranger;Service Vocal depuis Europe Régl DOM;BEL-VF -; 12/06/2015 11:49:00;01xx;0.5;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF FRA; 12/06/2015 20:30:00;03398454xxxx;7.3167;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF FRA; 12/06/2015 21:14:00;03368559xxxx;0.5;0;12;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF FRA; 14/06/2015 17:43:00;03368266xxxx;1.1;0;14;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF FRA; 14/06/2015 19:03:00;03349281xxxx;2.5;0;14;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF CHE; 14/06/2015 20:52:00;04179457xxxx;0.5;0;14;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF FRA; 14/06/2015 20:53:00;03361446xxxx;0.5;0;14;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF ESP; 15/06/2015 14:15:00;03491360xxxx;0.76667;0;15;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;ESP-VF FRA; 15/06/2015 18:20:00;03361446xxxx;0.5;0;15;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF BEL; 15/06/2015 21:16:00;0327181xxxx;1.5;0;15;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 22/06/2015 11:09:00;03349281xxxx;4.15;0;22;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 22/06/2015 11:13:00;x;1.1;0;22;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 22/06/2015 11:20:00;03332180xxxx;0.7;0;22;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 22/06/2015 11:27:00;x;10.55;0;22;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 22/06/2015 13:40:00;03332180xxxx;3.9833;0;22;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 22/06/2015 15:46:00;03332180xxxx;0.5;0;22;06;15 
+Communications à l'étranger;Appel émis depuis Europe Régl DOM;BEL-VF FRA; 22/06/2015 15:47:00;03368559xxxx;0.58333;0;22;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 22/06/2015 16:39:00;x;6.7333;0;22;06;15 
+Communications à l'étranger;Appel reçu en Europe Régl DOM;BEL-VF FRA; 22/06/2015 16:46:00;x;1.3667;0;22;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;BEL-VF FRA; 09/06/2015 10:39:00;x;1;0;09;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;BEL-VF FRA; 09/06/2015 10:39:00;x;1;0;09;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 14/06/2015 20:59:00;x;1;0;14;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 14/06/2015 20:59:00;x;1;0;14;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 14/06/2015 20:59:00;x;1;0;14;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 14/06/2015 20:59:00;x;1;0;14;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 15/06/2015 08:54:00;x;1;0;15;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 15/06/2015 08:58:00;x;1;0;15;06;15 
+SMS;Envoi de Texto depuis l'Europe Régl DOM;ESP-VF FRA; 15/06/2015 08:58:00;x;1;0;15;06;15 
+SMS;Texto émis vers l'étranger ou DOM-TOM;- BEL; 25/06/2015 15:53:00;3247584xxxx;1;0;25;06;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 00:01:00;068559xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 29/05/2015 16:43:00;068559xxxx;1;0;29;05;15 
+SMS;Message émis SFR Texto;- -; 01/06/2015 10:26:00;068559xxxx;1;0;01;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 09:14:00;067654xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 09:15:00;067654xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 09:15:00;067654xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 09:15:00;067654xxxx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 10/06/2015 12:16:00;88xx;1;0;10;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:59:00;061446xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:59:00;061446xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 14/06/2015 20:59:00;061446xxxx;1;0;14;06;15 
+SMS;Message émis SFR Texto;- -; 15/06/2015 08:58:00;062618xxxx;1;0;15;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 09:46:00;060398xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 10:38:00;060398xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 17/06/2015 13:34:00;068559xxxx;1;0;17;06;15 
+SMS;Message émis SFR Texto;- -; 18/06/2015 10:56:00;733xx;1;0;18;06;15 
+SMS;Message émis SFR Texto;- -; 23/06/2015 17:40:00;068068xxxx;1;0;23;06;15 
+SMS;Message émis SFR Texto;- -; 23/06/2015 17:40:00;068068xxxx;1;0;23;06;15 
+SMS;Message émis SFR Texto;- -; 23/06/2015 17:40:00;068068xxxx;1;0;23;06;15 
+SMS;Message émis SFR Texto;- -; 24/06/2015 17:54:00;444545xxxx;1;0;24;06;15 
+SMS;Message émis SFR Texto;- -; 25/06/2015 09:53:00;068559xxxx;1;0;25;06;15 
+SMS;Message émis SFR Texto;- -; 25/06/2015 10:27:00;068559xxxx;1;0;25;06;15 
+SMS;Message émis SFR Texto;- -; 26/06/2015 13:00:00;062028xxxx;1;0;26;06;15 
+National;Appel vers un portable;- -; 29/05/2015 17:52:00;068559xxxx;0.33333;0;29;05;15 
+National;Appel vers un portable;- -; 29/05/2015 18:24:00;068559xxxx;0.2;0;29;05;15 
+National;Appel vers un portable;- -; 29/05/2015 19:03:00;068559xxxx;0.25;0;29;05;15 
+National;Appel vers un portable;- -; 02/06/2015 11:42:00;064550xxxx;0.28333;0;02;06;15 
+National;Appel vers un portable;- -; 02/06/2015 11:43:00;064550xxxx;4.0333;0;02;06;15 
+National;Appel vers un portable;- -; 02/06/2015 12:34:00;064550xxxx;0.93333;0;02;06;15 
+National;Appel vers un portable;- -; 03/06/2015 13:31:00;068559xxxx;0.61667;0;03;06;15 
+National;Appel vers un portable;- -; 03/06/2015 14:30:00;068559xxxx;4.6333;0;03;06;15 
+National;Appel vers un portable;- -; 04/06/2015 14:22:00;064550xxxx;0.05;0;04;06;15 
+National;Appel vers un portable;- -; 04/06/2015 15:01:00;064550xxxx;0.066667;0;04;06;15 
+National;Appel vers un portable;- -; 10/06/2015 09:22:00;068559xxxx;1.7667;0;10;06;15 
+National;Appel vers un portable;- -; 10/06/2015 13:35:00;065925xxxx;0.033333;0;10;06;15 
+National;Appel vers un portable;- -; 10/06/2015 15:40:00;068345xxxx;0.23333;0;10;06;15 
+National;Appel vers un portable;- -; 16/06/2015 12:34:00;064550xxxx;13.8;0;16;06;15 
+National;Appel vers un portable;- -; 17/06/2015 09:18:00;068559xxxx;0.78333;0;17;06;15 
+National;Appel vers un portable;- -; 17/06/2015 10:13:00;068559xxxx;1.1;0;17;06;15 
+National;Appel vers un portable;- -; 17/06/2015 15:38:00;068559xxxx;0.51667;0;17;06;15 
+National;Appel vers un portable;- -; 17/06/2015 15:45:00;075007xxxx;0.5;0;17;06;15 
+National;Appel vers un portable;- -; 17/06/2015 17:15:00;068559xxxx;0.4;0;17;06;15 
+National;Appel vers un portable;- -; 17/06/2015 17:54:00;068559xxxx;0.4;0;17;06;15 
+National;Appel vers un portable;- -; 18/06/2015 20:30:00;068559xxxx;0.1;0;18;06;15 
+National;Appel vers un portable;- -; 19/06/2015 10:59:00;067399xxxx;7.3;0;19;06;15 
+National;Appel vers un portable;- -; 21/06/2015 20:35:00;067006xxxx;0.38333;0;21;06;15 
+National;Appel vers un portable;- -; 22/06/2015 17:13:00;068559xxxx;0.75;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 18:15:00;068559xxxx;2;0;22;06;15 
+National;Appel vers un portable;- -; 22/06/2015 21:19:00;061401xxxx;0.58333;0;22;06;15 
+National;Appel vers un portable;- -; 23/06/2015 10:46:00;060641xxxx;0.26667;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 17:09:00;068559xxxx;0.13333;0;23;06;15 
+National;Appel vers un portable;- -; 23/06/2015 18:54:00;067006xxxx;24.65;0;23;06;15 
+National;Appel vers un portable;- -; 24/06/2015 08:29:00;068559xxxx;1.9667;0;24;06;15 
+National;Appel vers un portable;- -; 24/06/2015 10:54:00;068559xxxx;0.11667;0;24;06;15 
+National;Appel vers un portable;- -; 25/06/2015 09:54:00;068559xxxx;3.9667;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 18:58:00;068559xxxx;0.2;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 19:28:00;068559xxxx;0.38333;0;25;06;15 
+National;Appel vers un portable;- -; 25/06/2015 19:54:00;068559xxxx;0.33333;0;25;06;15 
+National;Appel vers un portable;- -; 26/06/2015 15:19:00;068559xxxx;1.55;0;26;06;15 
+National;Appel vers un portable;- -; 26/06/2015 15:23:00;068559xxxx;1.6167;0;26;06;15 
+National;Appel vers un portable;- -; 28/06/2015 19:27:00;066215xxxx;1.8333;0;28;06;15 
+Data International;Conso. Ajustable Data EU/DOM/AMN;BEL-VF -; 04/06/2015 08:57:00;x;0.012;0;04;06;15 
+Data International;Conso. Ajustable Data EU/DOM/AMN;BEL-VF -; 04/06/2015 12:51:00;x;0.008;0;04;06;15 
+Data International;Conso. Ajustable Data EU/DOM/AMN;BEL-VF -; 04/06/2015 14:18:00;x;0.006;0;04;06;15 
+Data International;Conso. Ajustable Data EU/DOM/AMN;BEL-VF -; 05/06/2015 08:43:00;x;0.004;0;05;06;15 
+Data International;Conso. Ajustable Data EU/DOM/AMN;BEL-VF -; 05/06/2015 13:39:00;x;0.012;0;05;06;15 
+Data International;Conso. Ajustable Data EU/DOM/AMN;BEL-VF -; 08/06/2015 16:52:00;x;0.002;0;08;06;15 
+Data National;Session Blackberry;- -; 29/05/2015 00:32:00;x;0.005;0;29;05;15 
+Data National;Session Blackberry;- -; 29/05/2015 07:45:00;x;0.021;0;29;05;15 
+Data National;Session Blackberry;- -; 29/05/2015 08:15:00;x;0.002;0;29;05;15 
+Data National;Session Blackberry;- -; 29/05/2015 12:27:00;x;0.009;0;29;05;15 
+Data National;Session Blackberry;- -; 29/05/2015 19:46:00;x;0.051;0;29;05;15 
+Data National;Session Blackberry;- -; 30/05/2015 07:40:00;x;0.004;0;30;05;15 
+Data National;Session Blackberry;- -; 30/05/2015 12:51:00;x;0.034;0;30;05;15 
+Data National;Session Blackberry;- -; 31/05/2015 07:35:00;x;0.008;0;31;05;15 
+Data National;Session Blackberry;- -; 31/05/2015 19:12:00;x;0.005;0;31;05;15 
+Data National;Session Blackberry;- -; 01/06/2015 07:30:00;x;0.015;0;01;06;15 
+Data National;Session Blackberry;- -; 01/06/2015 17:00:00;x;0.005;0;01;06;15 
+Data National;Session Blackberry;- -; 01/06/2015 17:58:00;x;0.004;0;01;06;15 
+Data National;Session Blackberry;- -; 01/06/2015 20:47:00;x;0.008;0;01;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 09:09:00;x;0.002;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 09:09:00;x;0.003;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 09:53:00;x;0.002;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 09:56:00;x;0.012;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 20:31:00;x;0.002;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 20:39:00;x;0.004;0;02;06;15 
+Data National;Session Blackberry;- -; 02/06/2015 21:54:00;x;0.038;0;02;06;15 
+Data National;Session Blackberry;- -; 03/06/2015 20:34:00;x;0.003;0;03;06;15 
+Data National;Session Blackberry;- -; 04/06/2015 00:50:00;x;0.051;0;04;06;15 
+Data National;Session Blackberry;- -; 04/06/2015 14:21:00;x;0.002;0;04;06;15 
+Data National;Session Blackberry;- -; 04/06/2015 14:38:00;x;0.002;0;04;06;15 
+Data National;Session Blackberry;- -; 04/06/2015 15:02:00;x;0.009;0;04;06;15 
+Data National;Session Blackberry;- -; 05/06/2015 07:39:00;x;0.003;0;05;06;15 
+Data National;Session Blackberry;- -; 05/06/2015 15:18:00;x;0.002;0;05;06;15 
+Data National;Session Blackberry;- -; 05/06/2015 16:45:00;x;0.037;0;05;06;15 
+Data National;Session Blackberry;- -; 06/06/2015 15:13:00;x;0.004;0;06;06;15 
+Data National;Session Blackberry;- -; 06/06/2015 18:27:00;x;0.005;0;06;06;15 
+Data National;Session Blackberry;- -; 07/06/2015 02:20:00;x;0.002;0;07;06;15 
+Data National;Session Blackberry;- -; 07/06/2015 02:28:00;x;0.008;0;07;06;15 
+Data National;Session Blackberry;- -; 07/06/2015 16:48:00;x;0.004;0;07;06;15 
+Data National;Session Blackberry;- -; 08/06/2015 02:15:00;x;0.009;0;08;06;15 
+Data National;Session Blackberry;- -; 08/06/2015 12:04:00;x;0.01;0;08;06;15 
+Data National;Session Blackberry;- -; 09/06/2015 15:09:00;x;0.032;0;09;06;15 
+Data National;Session Blackberry;- -; 09/06/2015 15:44:00;x;0.003;0;09;06;15 
+Data National;Session Blackberry;- -; 09/06/2015 17:26:00;x;0.018;0;09;06;15 
+Data National;Session Blackberry;- -; 10/06/2015 08:25:00;x;0.015;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 12:10:00;x;0.035;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 12:10:00;x;11.822;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 12:16:00;x;19.429;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 12:26:00;x;32.809;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 14:59:00;x;0.393;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 15:20:00;x;0.831;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 16:08:00;x;18.078;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 16:35:00;x;25.509;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 17:36:00;x;0.227;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 17:45:00;x;0.016;0;10;06;15 
+Data National;Connexion à Internet;- -; 10/06/2015 18:00:00;x;64.116;0;10;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 09:56:00;x;0.099;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 11:11:00;x;15.002;0;11;06;15 
+Data National;Connexion à Internet;- -; 11/06/2015 20:11:00;x;3.348;0;11;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 22:52:00;x;2.349;0;15;06;15 
+Data National;Connexion à Internet;- -; 15/06/2015 23:12:00;x;0.985;0;15;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 13:17:00;x;0.023;0;16;06;15 
+Data National;Connexion à Internet;- -; 16/06/2015 14:28:00;x;1.407;0;16;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 07:07:00;x;2.098;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 08:42:00;x;0.008;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 08:43:00;x;2.415;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 09:34:00;x;0.027;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 09:44:00;x;1.663;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 12:40:00;x;0.062;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 12:48:00;x;0.007;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:19:00;x;0.147;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 13:57:00;x;8.207;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 16:33:00;x;0.446;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 17:03:00;x;1.604;0;17;06;15 
+Data National;Connexion à Internet;- -; 17/06/2015 18:19:00;x;1.504;0;17;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 12:40:00;x;4.116;0;18;06;15 
+Data National;Connexion à Internet;- -; 18/06/2015 20:31:00;x;0.365;0;18;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 10:27:00;x;0.148;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 11:19:00;x;2.334;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 14:49:00;x;0.037;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 14:56:00;x;0.803;0;19;06;15 
+Data National;Connexion à Internet;- -; 19/06/2015 15:42:00;x;36.31;0;19;06;15 
+Data National;Connexion à Internet;- -; 20/06/2015 15:37:00;x;5.335;0;20;06;15 
+Data National;Connexion à Internet;- -; 21/06/2015 15:38:00;x;0.538;0;21;06;15 
+Data National;Connexion à Internet;- -; 21/06/2015 20:35:00;x;1.229;0;21;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 16:48:00;x;18.396;0;22;06;15 
+Data National;Connexion à Internet;- -; 22/06/2015 21:30:00;x;1.755;0;22;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 10:29:00;x;4.767;0;23;06;15 
+Data National;Session web GPRS;- -; 23/06/2015 10:38:00;x;0.729;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 13:13:00;x;4.452;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 17:01:00;x;0.248;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 18:03:00;x;0.139;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 19:19:00;x;0.067;0;23;06;15 
+Data National;Connexion à Internet;- -; 23/06/2015 20:45:00;x;2.56;0;23;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 15:53:00;x;8.748;0;24;06;15 
+Data National;Connexion à Internet;- -; 24/06/2015 22:20:00;x;1.712;0;24;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 10:14:00;x;10.227;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 12:41:00;x;25.585;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 18:56:00;x;7.304;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 19:06:00;x;11.065;0;25;06;15 
+Data National;Connexion à Internet;- -; 25/06/2015 19:52:00;x;3.311;0;25;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 09:47:00;x;1.482;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 10:52:00;x;2.153;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 12:33:00;x;1.387;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 15:46:00;x;0.758;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 18:46:00;x;0.409;0;26;06;15 
+Data National;Connexion à Internet;- -; 26/06/2015 19:25:00;x;0.644;0;26;06;15 
+Data National;Connexion à Internet;- -; 27/06/2015 11:19:00;x;2.43;0;27;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 11:37:00;x;0.222;0;28;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 19:24:00;x;0.009;0;28;06;15 
+Data National;Connexion à Internet;- -; 28/06/2015 19:31:00;x;2.318;0;28;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 31/05/2015 19:10:00;3247541xxxx;2.05;0;31;05;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 10:00:00;3247984xxxx;3.4167;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 10:11:00;321023xxxx;0.083333;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 10:11:00;321023xxxx;6.8;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 10:28:00;3247552xxxx;0.56667;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- DEU; 01/06/2015 10:56:00;49173702xxxx;0.3;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- DEU; 01/06/2015 10:59:00;49173702xxxx;1.1667;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 11:02:00;3247984xxxx;0.45;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 13:45:00;3247575xxxx;34.15;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 01/06/2015 14:20:00;3247575xxxx;2.35;0;01;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 02/06/2015 16:01:00;3247575xxxx;0.3;0;02;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 02/06/2015 16:01:00;3247984xxxx;5.6;0;02;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 03/06/2015 14:36:00;3247984xxxx;0.46667;0;03;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 03/06/2015 14:37:00;3247593xxxx;0.48333;0;03;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 03/06/2015 16:34:00;3247984xxxx;0.066667;0;03;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 05/06/2015 08:26:00;3247864xxxx;0.55;0;05;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 11/06/2015 18:36:00;327120xxxx;0.81667;0;11;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 11/06/2015 18:37:00;327181xxxx;1.3667;0;11;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 11/06/2015 20:09:00;327142xxxx;1;0;11;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 11/06/2015 21:16:00;327181xxxx;0.33333;0;11;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 17/06/2015 13:37:00;3247984xxxx;4.0833;0;17;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 19/06/2015 10:27:00;328521xxxx;1.3;0;19;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 21/06/2015 13:23:00;328521xxxx;0.46667;0;21;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 24/06/2015 15:34:00;3247984xxxx;9;0;24;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 24/06/2015 15:44:00;3247593xxxx;2.8667;0;24;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 24/06/2015 18:51:00;3247584xxxx;5.25;0;24;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 25/06/2015 17:41:00;3247984xxxx;2.05;0;25;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 26/06/2015 12:26:00;3247984xxxx;0.16667;0;26;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 26/06/2015 14:06:00;3247984xxxx;0.68333;0;26;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 26/06/2015 15:13:00;3247984xxxx;2.8333;0;26;06;15 
+International;Appel vers l'étranger ou les DOM-TOM;- BEL; 26/06/2015 16:04:00;328521xxxx;0.71667;0;26;06;15 
+National;Appel vers tél. fixe en France;- -; 05/06/2015 15:35:00;032110xxxx;3.0667;0;05;06;15 
+National;Appel vers tél. fixe en France;- -; 11/06/2015 15:41:00;032110xxxx;9.45;0;11;06;15 
+National;Appel vers tél. fixe en France;- -; 11/06/2015 16:00:00;032160xxxx;0.21667;0;11;06;15 
+National;Appel vers tél. fixe en France;- -; 11/06/2015 17:06:00;032110xxxx;0.83333;0;11;06;15 
+National;Appel vers tél. fixe en France;- -; 17/06/2015 15:40:00;098454xxxx;3.8;0;17;06;15 
+National;Appel vers tél. fixe en France;- -; 24/06/2015 10:51:00;032180xxxx;0.1;0;24;06;15 
+National;Appel vers tél. fixe en France;- -; 24/06/2015 10:51:00;032180xxxx;0.05;0;24;06;15 
+National;Appel vers tél. fixe en France;- -; 24/06/2015 10:53:00;032180xxxx;0.11667;0;24;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 12:15:00;032180xxxx;1.4833;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 17:39:00;032180xxxx;1.0167;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 18:57:00;032180xxxx;0.05;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 25/06/2015 19:28:00;032180xxxx;0.066667;0;25;06;15 
+National;Appel vers tél. fixe en France;- -; 26/06/2015 10:39:00;032199xxxx;1.1667;0;26;06;15 
+National;Appel vers tél. fixe en France;- -; 26/06/2015 10:42:00;032199xxxx;0.91667;0;26;06;15 
+National;Appel vers tél. fixe en France;- -; 26/06/2015 14:22:00;015527xxxx;3.4667;0;26;06;15 
+National;Appel vers tél. fixe en France;- -; 26/06/2015 15:26:00;015527xxxx;0.1;0;26;06;15 
+National;Appel interne numéro court;- -; 01/06/2015 10:09:00;3361127xxxx;0.61667;0;01;06;15 
+National;Appel interne numéro court;- -; 23/06/2015 12:42:00;3360398xxxx;4.3;0;23;06;15 
+National;Appel interne numéro court;- -; 23/06/2015 12:56:00;061588xxxx;0.45;0;23;06;15 
+National;Appel vers un portable;- -; 01/06/2015 12:15:00;062618xxxx;2.3167;0;01;06;15 
+National;Appel vers un portable;- -; 02/06/2015 15:48:00;062618xxxx;4.7667;0;02;06;15 
+National;Appel vers un portable;- -; 02/06/2015 16:09:00;061810xxxx;0.5;0;02;06;15 
+National;Appel vers un portable;- -; 11/06/2015 16:16:00;067654xxxx;2.3833;0;11;06;15 
+National;Appel vers un portable;- -; 22/06/2015 18:26:00;062618xxxx;1.4;0;22;06;15 
+National;Appel vers un portable;- -; 28/06/2015 19:16:00;062849xxxx;0.41667;0;28;06;15 
+National;Appel vers un portable;- -; 28/06/2015 19:26:00;062849xxxx;0.21667;0;28;06;15 
+Autres;Remises sur Consommations;; ;No Number;1;0;;; 
+ #Appels/Oproepen/Calls: ; 308.000000
