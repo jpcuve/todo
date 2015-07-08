@@ -1,6 +1,9 @@
 package com.cycc.todo;
 
 import com.google.common.base.Joiner;
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.TreeMultimap;
 
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -14,31 +17,13 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Created by jpc on 9/01/2015.
+ * Created by jpc on 7/8/15.
  */
-public class Muac {
+public class Todo {
     private static final Joiner JOINER = Joiner.on(";");
     private final static Map<String, String> CONFIG_BY_CODE = new HashMap<>();
     private final static Map<String, String> CONFIG_BY_NAME = new HashMap<>();
     private final static Map<String, LineInfoRecord> OPTIFLEET = new HashMap<>();
-    private final static Map<String, Map<String, CallDataRecord>> CDR_BY_RENAMING = new TreeMap<>();
-    private final static Map<String, Map<String, CallDataRecord>> CDR_BY_REMAPPING = new TreeMap<>();
-    private final static Map<String, CallDataRecord> TOTAL_REMAPPING = new TreeMap<>();
-
-/*
-    private static void addCallDataRecord(Map<String, Map<String, CallDataRecord>> cdr, CallDataRecord rec, String key){
-        Map<String, CallDataRecord> map = cdr.get(rec.getLine());
-        if (map == null){
-            map = new TreeMap<>();
-            cdr.put(rec.getLine(), map);
-        }
-        CallDataRecord existing = map.get(key);
-        if (existing == null){
-            map.put(key, rec);
-        } else {
-            map.put(key, existing.combine(rec));
-        }
-    }
 
     public static void main(String[] args) throws Exception {
         LineNumberReader lnr = new LineNumberReader(new FileReader("etc/sample/lhoist/input/FR_LHOISTP_01_Config_Matlab.txt"));
@@ -69,27 +54,33 @@ public class Muac {
         System.out.printf("count of lines in optifleet: %s%n", OPTIFLEET.size());
         final String cdrFileName = "Call_data_records_Lhoist France_traffic_201505.txt";
         lnr = new LineNumberReader(new FileReader("etc/sample/lhoist/input/" + cdrFileName));
+        final CostAccumulator accLine = new CostAccumulator();
+        final CostAccumulator accLineWithoutSubscription = new CostAccumulator();
+        final CostAccumulator accLineRenaming = new CostAccumulator();
+        final CostAccumulator accLineRemapping = new CostAccumulator();
+        final Multimap<String, CallDataRecord> multimap = HashMultimap.create();
         s = lnr.readLine();
         while ((s = lnr.readLine()) != null){
             final CallDataRecord rec = new CallDataRecord(s.split(";", -1));
-            addCallDataRecord(CDR_BY_RENAMING, rec, rec.getRenaming());
-            final String remapping = rec.getRemapping();
-            addCallDataRecord(CDR_BY_REMAPPING, rec, remapping);
-            CallDataRecord existing = TOTAL_REMAPPING.get(remapping);
-            if (existing == null){
-                TOTAL_REMAPPING.put(remapping, rec);
-            } else {
-                TOTAL_REMAPPING.put(remapping, existing.combine(rec));
+            multimap.put(rec.getLine(), rec);
+            accLine.accumulate(new Key(rec.getLine()), rec.getCost());
+            if (!rec.isSubscription()){
+                accLineWithoutSubscription.accumulate(new Key(rec.getLine()), rec.getCost());
             }
+            accLineRenaming.accumulate(new Key(rec.getLine(), rec.getRenaming()), rec.getCost());
+            accLineRemapping.accumulate(new Key(rec.getLine(), rec.getRemapping()), rec.getCost());
         }
-        System.out.printf("count of lines in cdr: %s%n", CDR_BY_RENAMING.size());
+        System.out.printf("count of lines in cdr: %s%n", multimap.size());
+        final Map<String, CostRecord> totalPerLine = accLine.extractMap();
+        final Map<String, CostRecord> totalPerLineWithoutSubscription = accLineWithoutSubscription.extractMap();
         final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
         final PrintWriter pw = new PrintWriter(zos);
-        for (final Map.Entry<String, Map<String, CallDataRecord>> entry: CDR_BY_RENAMING.entrySet()){
+        for (final Map.Entry<String, Collection<CallDataRecord>> entry: multimap.asMap().entrySet()){
             final String line = entry.getKey();
             final LineInfoRecord lineInfo = OPTIFLEET.get(line);
             final String language = lineInfo == null || lineInfo.getLanguage() == null ? "EN" : lineInfo.getLanguage();
             zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo == null ? "" : lineInfo.getEmail(), cdrFileName)));
+/*
             CallDataRecord renamingTotalSubscriptionExcluded = new CallDataRecord("total subs excl");
             CallDataRecord renamingTotal = new CallDataRecord("total");
             for (final Map.Entry<String, CallDataRecord> renamingEntry: entry.getValue().entrySet()){
@@ -102,14 +93,16 @@ public class Muac {
                     renamingTotalSubscriptionExcluded = renamingTotalSubscriptionExcluded.combine(rec);
                 }
             }
-            pw.printf("%s%n", JOINER.join(new Object[]{renamingTotalSubscriptionExcluded.getRenaming(), "", "", "", renamingTotalSubscriptionExcluded.getCost(), ""}));
-            pw.printf("%s%n", JOINER.join(new Object[]{renamingTotal.getRenaming(), "", "", "", renamingTotal.getCost(), ""}));
+*/
+            pw.printf("%s%n", JOINER.join(new Object[]{"*total cost subscription excluded", "", "", "", totalPerLineWithoutSubscription.containsKey(line) ? totalPerLineWithoutSubscription.get(line).getCost() : BigDecimal.ZERO, ""}));
+            pw.printf("%s%n", JOINER.join(new Object[]{"*total cost line", "", "", "", totalPerLine.containsKey(line) ? totalPerLine.get(line).getCost() : BigDecimal.ZERO, ""}));
             pw.printf("%n");
             final String[] tableTitles = new String[]{ "TR_1", "TR_2", "TR_3" };
             for (int i = 0; i < tableTitles.length; i++){
                 tableTitles[i] = CONFIG_BY_CODE.get(String.format("%s-%s", tableTitles[i], language));
             }
             pw.printf("%s%n", JOINER.join(tableTitles));
+/*
             for (final Map.Entry<String, CallDataRecord> remappingEntry: CDR_BY_REMAPPING.get(line).entrySet()){
                 final String remapping = remappingEntry.getKey();
                 final CallDataRecord rec = remappingEntry.getValue();
@@ -126,10 +119,18 @@ public class Muac {
                 final CallDataRecord rec = totalRemappingEntry.getValue();
                 pw.printf("%s%n", JOINER.join(new Object[]{ "total", remapping, rec.getUnits(), rec.getCost()}));
             }
+*/
+            pw.printf("%nD�tails des appels%nType de trafic;Type d'appel;Destination / r�seau visit�;Date;Num�ro compos�;Unit�s;Co�t");
+            final Collection<CallDataRecord> callDataRecords = multimap.get(line);
+            if (callDataRecords != null){
+                for (final CallDataRecord rec: callDataRecords){
+                    pw.printf("%s%n", rec.getRemapping());
+                }
+            }
             pw.flush();
             zos.closeEntry();
         }
         zos.close();
+
     }
-*/
 }

@@ -14,17 +14,14 @@ public class CallDataRecord {
     private String histogram;
     private String remapping;
     private boolean included;
-    private int count;
-    private BigDecimal units;
-    private BigDecimal cost;
+    private CostRecord cost;
 
     public CallDataRecord() {
     }
 
     public CallDataRecord(String renaming){
         this.renaming = renaming;
-        this.units = BigDecimal.ZERO;
-        this.cost = BigDecimal.ZERO;
+        this.cost = new CostRecord();
     }
 
     public CallDataRecord(final String[] data) {
@@ -33,12 +30,19 @@ public class CallDataRecord {
         this.remapping = data[26 + 4];
         this.renaming = data[26 + 5];
         this.included = Boolean.parseBoolean(data[26 + 19]);
-        this.count = 1;
-        this.units = new BigDecimal(data[26 + 12]).setScale(4, BigDecimal.ROUND_CEILING);
+        BigDecimal units = new BigDecimal(data[26 + 12]).setScale(4, BigDecimal.ROUND_CEILING);
         if ("DURATION".equals(data[26 + 11])){
-            this.units = this.units.divide(SIXTY, RoundingMode.CEILING).setScale(4, BigDecimal.ROUND_CEILING);
+            units = units.divide(SIXTY, RoundingMode.CEILING).setScale(4, BigDecimal.ROUND_CEILING);
         }
-        this.cost = new BigDecimal(data[26 + 17]).setScale(4, BigDecimal.ROUND_CEILING);
+        this.cost = new CostRecord(1, units, new BigDecimal(data[26 + 17]).setScale(4, BigDecimal.ROUND_CEILING));
+    }
+
+    public Key getKey(){
+        return new Key(line, renaming, remapping);
+    }
+
+    public CostRecord getCost() {
+        return cost;
     }
 
     public String getLine() {
@@ -63,34 +67,5 @@ public class CallDataRecord {
 
     public boolean isSubscription(){
         return "SUBSCRIPTION".equals(histogram);
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public BigDecimal getUnits() {
-        return units;
-    }
-
-    public BigDecimal getCost() {
-        return cost;
-    }
-
-    public BigDecimal getCostPerUnit() {
-        return this.units.signum() == 0 ? BigDecimal.ZERO : this.cost.divide(this.units, RoundingMode.CEILING);
-    }
-
-    public CallDataRecord combine(CallDataRecord rec){
-        final CallDataRecord combined = new CallDataRecord();
-        combined.line = this.line;
-        combined.renaming = this.renaming;
-        combined.histogram = this.histogram;
-        combined.remapping = this.remapping;
-        combined.included = this.included;
-        combined.count = this.count++;
-        combined.units = this.units.add(rec.units);
-        combined.cost = this.cost.add(rec.cost);
-        return combined;
     }
 }
