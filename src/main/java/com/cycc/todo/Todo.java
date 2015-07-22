@@ -70,6 +70,8 @@ public class Todo {
         System.out.printf("count of lines in cdr: %s%n", multimap.size());
         final Map<String, CostRecord> totalPerLine = accLine.extractMap();
         final Map<String, CostRecord> totalPerLineWithoutSubscription = accLineWithoutSubscription.extractMap();
+        final Map<String, Map<String, CostRecord>> renamingPerLine = accLineRenaming.extractTable();
+        final Map<String, Map<String, CostRecord>> remappingPerLine = accLineRemapping.extractTable();
         final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
         final PrintWriter pw = new PrintWriter(zos);
         for (final Map.Entry<String, Collection<CallDataRecord>> entry: multimap.asMap().entrySet()){
@@ -77,6 +79,28 @@ public class Todo {
             final LineInfoRecord lineInfo = OPTIFLEET.get(line);
             final String language = lineInfo == null || lineInfo.getLanguage() == null ? "EN" : lineInfo.getLanguage();
             zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo == null ? "" : lineInfo.getEmail(), cdrFileName)));
+            final Map<String, CostRecord> costByRenaming = renamingPerLine.get(line);
+            for (final Map.Entry<String, CostRecord> renamingEntry: costByRenaming.entrySet()){
+                final String renaming = renamingEntry.getKey();
+                final CostRecord rec = renamingEntry.getValue();
+                String remapping = "";
+                String key = String.format("%s-%s", remapping, language);
+                pw.printf("%s%n", JOINER.join(new Object[]{ renaming, remapping , rec.getCount(), rec.getUnits(), rec.getCost(), "some cost per unit"}));
+            }
+/*
+            CallDataRecord renamingTotalSubscriptionExcluded = new CallDataRecord("total subs excl");
+            CallDataRecord renamingTotal = new CallDataRecord("total");
+            for (final Map.Entry<String, CallDataRecord> renamingEntry: entry.getValue().entrySet()){
+                final String renaming = renamingEntry.getKey();
+                final CallDataRecord rec = renamingEntry.getValue();
+                String key = String.format("%s-%s", rec.getRemapping(), language);
+                pw.printf("%s%n", JOINER.join(new Object[]{ renaming, CONFIG_BY_NAME.get(key) , rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
+                renamingTotal = renamingTotal.combine(rec);
+                if (!rec.isSubscription()){
+                    renamingTotalSubscriptionExcluded = renamingTotalSubscriptionExcluded.combine(rec);
+                }
+            }
+*/
             pw.printf("%s%n", JOINER.join(new Object[]{"*total cost subscription excluded", "", "", "", totalPerLineWithoutSubscription.containsKey(line) ? totalPerLineWithoutSubscription.get(line).getCost() : BigDecimal.ZERO, ""}));
             pw.printf("%s%n", JOINER.join(new Object[]{"*total cost line", "", "", "", totalPerLine.containsKey(line) ? totalPerLine.get(line).getCost() : BigDecimal.ZERO, ""}));
             pw.printf("%n");
@@ -85,12 +109,30 @@ public class Todo {
                 tableTitles[i] = CONFIG_BY_CODE.get(String.format("%s-%s", tableTitles[i], language));
             }
             pw.printf("%s%n", JOINER.join(tableTitles));
+/*
+            for (final Map.Entry<String, CallDataRecord> remappingEntry: CDR_BY_REMAPPING.get(line).entrySet()){
+                final String remapping = remappingEntry.getKey();
+                final CallDataRecord rec = remappingEntry.getValue();
+                if (rec.getCost().signum() > 0){
+                    // get average for remapping
+                    final CallDataRecord totalRemapping = TOTAL_REMAPPING.get(remapping);
+                    final BigDecimal averageCost = totalRemapping.getCost().divide(new BigDecimal(CDR_BY_RENAMING.size()), new MathContext(2, RoundingMode.CEILING));
+                    pw.printf("%s%n", JOINER.join(new Object[]{ remapping, rec.getCost(), rec.getCost().subtract(averageCost)}));
+
+                }
+            }
+            for (final Map.Entry<String, CallDataRecord> totalRemappingEntry: TOTAL_REMAPPING.entrySet()){
+                final String remapping = totalRemappingEntry.getKey();
+                final CallDataRecord rec = totalRemappingEntry.getValue();
+                pw.printf("%s%n", JOINER.join(new Object[]{ "total", remapping, rec.getUnits(), rec.getCost()}));
+            }
+*/
             pw.printf("%nD�tails des appels%nType de trafic;Type d'appel;Destination / r�seau visit�;Date;Num�ro compos�;Unit�s;Co�t%n");
             final Collection<CallDataRecord> callDataRecords = multimap.get(line);
             if (callDataRecords != null){
                 for (final CallDataRecord rec: callDataRecords){
                     pw.printf("%s%n", JOINER.join(rec.getRemapping(), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost()));
-                    // TODO 3 more fields unknown to me
+                    // TODO 3 more fields
                 }
             }
             pw.flush();
