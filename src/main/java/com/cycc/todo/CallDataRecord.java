@@ -1,7 +1,6 @@
 package com.cycc.todo;
 
 import java.math.BigDecimal;
-import java.math.MathContext;
 import java.math.RoundingMode;
 
 /**
@@ -13,6 +12,9 @@ public class CallDataRecord {
     private String renaming;
     private String histogram;
     private String remapping;
+    private String destinationService;
+    private String destinationNumber;
+    private String when;
     private boolean included;
     private CostRecord cost;
 
@@ -29,6 +31,9 @@ public class CallDataRecord {
         this.histogram = data[26 + 3];
         this.remapping = data[26 + 4];
         this.renaming = data[26 + 5];
+        this.destinationService = data[26 + 6];
+        this.destinationNumber = data[26 + 7];
+        this.when = data[26 + 10];
         this.included = Boolean.parseBoolean(data[26 + 19]);
         BigDecimal units = new BigDecimal(data[26 + 12]).setScale(4, BigDecimal.ROUND_CEILING);
         if ("DURATION".equals(data[26 + 11])){
@@ -55,6 +60,18 @@ public class CallDataRecord {
 
     public String getRemapping() {
         return remapping;
+    }
+
+    public String getDestinationService() {
+        return destinationService;
+    }
+
+    public String getDestinationNumber() {
+        return destinationNumber;
+    }
+
+    public String getWhen() {
+        return when;
     }
 
     public String getHistogram() {

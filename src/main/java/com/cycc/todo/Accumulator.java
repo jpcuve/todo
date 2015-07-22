@@ -8,23 +8,18 @@ import java.util.TreeMap;
  * Created by jpc on 7/8/15.
  */
 public abstract class Accumulator<E> extends HashMap<Key, E> {
+    private E total;
 
     public void accumulate(Key key, E e){
         E existing = get(key);
         put(key, existing == null ? e : accumulate(existing, e));
+        total = total == null ? e : accumulate(total, e);
     }
 
     public abstract E accumulate(E e1, E e2);
 
-    public E extractSingle(){
-        if (size() != 1){
-            throw new IllegalArgumentException("Accumulator has more than one element");
-        }
-        E e = null;
-        for (final Map.Entry<Key, E> entry: entrySet()){
-            e = entry.getValue();
-        }
-        return e;
+    public E getTotal() {
+        return total;
     }
 
     public <F> Map<F, E> extractMap(){
