@@ -42,4 +42,8 @@ public class CostRecord {
     public void setCost(BigDecimal cost) {
         this.cost = cost;
     }
+
+    public BigDecimal getCostPerUnit(){
+        return units.signum() == 0 ? BigDecimal.ZERO : cost.divide(units, 4, BigDecimal.ROUND_CEILING);
+    }
 }
