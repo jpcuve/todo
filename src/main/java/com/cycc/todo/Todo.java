@@ -23,21 +23,21 @@ public class Todo {
     private static final int[] BOUNDARIES = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 300, 3000, Integer.MAX_VALUE };
     private static final String[] EMPTY_DATE = { "", "", "" };
     private static final String NO_NUMBER = "No Number";
-    private final static Map<String, String> CONFIG = new HashMap<>();
+    private final static Map<Key, String> CONFIG = new HashMap<>();
     private final static Map<String, LineInfoRecord> LINE_INFO_BY_LINE = new HashMap<>();
 
     private static void putCode(String language, String code, String value){
-        CONFIG.put(String.format("%s-%s", code, language), value);
+        CONFIG.put(new Key(code, language), value);
     }
 
     private static String getCode(String language, String code){
-        return CONFIG.get(String.format("%s-%s", code, language));
+        return CONFIG.get(new Key(code, language));
     }
 
     private static String[] getCodes(String language, String... codes){
         final String[] ss = new String[codes.length];
         for (int i = 0; i < codes.length; i++){
-            ss[i] = CONFIG.get(String.format("%s-%s", codes[i], language));
+            ss[i] = CONFIG.get(new Key(codes[i], language));
         }
         return ss;
     }
@@ -92,14 +92,15 @@ public class Todo {
             if (!rec.isSubscription()){
                 accLineWithoutSubscription.accumulate(new Key(rec.getLine()), rec.getCost());
             }
-            accLineRenaming.accumulate(new Key(rec.getLine(), String.format("%s|%s", rec.getRenaming(), rec.getRemapping())), rec.getCost());
+            accLineRenaming.accumulate(new Key(rec.getLine(), new Key(rec.getRenaming(), rec.getRemapping())), rec.getCost());
             accLineRemapping.accumulate(new Key(rec.getLine(), rec.getRemapping()), rec.getCost());
             accRemapping.accumulate(new Key(rec.getRemapping()), rec.getCost());
         }
         LOGGER.debug("count of lines in cdr: {}", multimap.size());
+        profiler.start("Computing summaries");
         final Map<String, CostRecord> totalPerLine = accLine.extractMap();
         final Map<String, CostRecord> totalPerLineWithoutSubscription = accLineWithoutSubscription.extractMap();
-        final Map<String, Map<String, CostRecord>> renamingPerLine = accLineRenaming.extractTable();
+        final Map<String, Map<Key, CostRecord>> renamingPerLine = accLineRenaming.extractTable();
         final Map<String, Map<String, CostRecord>> remappingPerLine = accLineRemapping.extractTable();
         final Map<String, CostRecord> remappingTotal = accRemapping.extractMap();
         final List<String> lines = new ArrayList<>(multimap.keySet());
@@ -139,7 +140,7 @@ public class Todo {
         for (final CostRecord rec: totalPerLine.values()){
             final BigDecimal cost = rec.getCost();
             for (final Map.Entry<Range, Integer> entry: ranges.entrySet()){
-                if (entry.getKey().contains(cost)){
+                if (entry.getKey().includes(cost)){
                     entry.setValue(entry.getValue() + 1);
                 }
             }
@@ -154,14 +155,11 @@ public class Todo {
             final String language = lineInfo == null || lineInfo.getLanguage() == null ? "EN" : lineInfo.getLanguage();
             zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo == null ? "" : lineInfo.getEmail(), cdrFileName)));
             pw.printf("%s%n", JOINER.join(getCodes(language, "CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6")));
-            final Map<String, CostRecord> costByRenaming = renamingPerLine.get(line);
-            for (final Map.Entry<String, CostRecord> renamingEntry: costByRenaming.entrySet()){
-                final String renaming = renamingEntry.getKey();
+            final Map<Key, CostRecord> costByRenaming = renamingPerLine.get(line);
+            for (final Map.Entry<Key, CostRecord> renamingEntry: costByRenaming.entrySet()){
+                final Key renaming = renamingEntry.getKey();
                 final CostRecord rec = renamingEntry.getValue();
-                int pipe = renaming.indexOf('|');
-                final String ren = renaming.substring(0, pipe);
-                final String rem = renaming.substring(pipe + 1);
-                pw.printf("%s%n", JOINER.join(new Object[]{ ren, getCode(language, rem), rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
+                pw.printf("%s%n", JOINER.join(new Object[]{ renaming.getComponent(0), getCode(language, renaming.getComponent(1).toString()), rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
             }
             pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_7"), "", "", "", totalPerLineWithoutSubscription.containsKey(line) ? totalPerLineWithoutSubscription.get(line).getCost() : BigDecimal.ZERO }));
             pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_8"), "", "", "", totalLineCost }));
@@ -181,7 +179,7 @@ public class Todo {
             pw.printf("%s%n", JOINER.join(getCode(language, "TR_14"), (lineCount.intValue() - positions.indexOf(line) + 1), totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
             pw.printf("%s%n", JOINER.join(getCode(language, "TR_15"), lineCount));
             for (final Map.Entry<Range, Integer> entry2: ranges.entrySet()){
-                if (entry2.getKey().contains(totalLineCost)){
+                if (entry2.getKey().includes(totalLineCost)){
                     pw.printf("%s%n", JOINER.join(getCode(language, "TR_2"), entry2.getValue(), entry2.getValue()));
                 } else{
                     pw.printf("%s%n", JOINER.join(entry2.getKey().getLower(), entry2.getValue()));

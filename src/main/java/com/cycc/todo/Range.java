@@ -26,7 +26,7 @@ public class Range implements Comparable<Range> {
         return upper;
     }
 
-    public boolean contains(BigDecimal test){
+    public boolean includes(BigDecimal test){
         return test.compareTo(lower) >= 0 && test.compareTo(upper) < 0;
     }
 
