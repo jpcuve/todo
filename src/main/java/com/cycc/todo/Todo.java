@@ -121,7 +121,7 @@ public class Todo {
         for (final CostRecord rec: totalPerLine.values()){
             final BigDecimal cost = rec.getCost();
             for (final Map.Entry<Range, Integer> entry: ranges.entrySet()){
-                if (entry.getKey().isInside(cost)){
+                if (entry.getKey().contains(cost)){
                     entry.setValue(entry.getValue() + 1);
                 }
             }
@@ -165,7 +165,7 @@ public class Todo {
             pw.printf("%s%n", JOINER.join("*coût total (Trafic & Abonnements)", (lineCount.intValue() - positions.indexOf(line) + 1), totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
             pw.printf("%s%n", JOINER.join("*nombre de lignes comparées", lineCount));
             for (final Map.Entry<Range, Integer> entry2: ranges.entrySet()){
-                if (entry2.getKey().isInside(totalLineCost)){
+                if (entry2.getKey().contains(totalLineCost)){
                     pw.printf("%s%n", JOINER.join("*Votre position", entry2.getValue(), entry2.getValue()));
                 } else{
                     pw.printf("%s%n", JOINER.join(entry2.getKey().getLower(), entry2.getValue()));
