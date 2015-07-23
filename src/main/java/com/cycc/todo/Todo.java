@@ -21,9 +21,26 @@ public class Todo {
     private static final Logger LOGGER = LoggerFactory.getLogger(Todo.class);
     private static final Joiner JOINER = Joiner.on(";");
     private static final int[] BOUNDARIES = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 300, 3000, Integer.MAX_VALUE };
-    private final static Map<String, String> CONFIG_BY_CODE = new HashMap<>();
-    private final static Map<String, String> CONFIG_BY_NAME = new HashMap<>();
-    private final static Map<String, LineInfoRecord> OPTIFLEET = new HashMap<>();
+    private static final String[] EMPTY_DATE = { "", "", "" };
+    private static final String NO_NUMBER = "No Number";
+    private final static Map<String, String> CONFIG = new HashMap<>();
+    private final static Map<String, LineInfoRecord> LINE_INFO_BY_LINE = new HashMap<>();
+
+    private static void putCode(String language, String code, String value){
+        CONFIG.put(String.format("%s-%s", code, language), value);
+    }
+
+    private static String getCode(String language, String code){
+        return CONFIG.get(String.format("%s-%s", code, language));
+    }
+
+    private static String[] getCodes(String language, String... codes){
+        final String[] ss = new String[codes.length];
+        for (int i = 0; i < codes.length; i++){
+            ss[i] = CONFIG.get(String.format("%s-%s", codes[i], language));
+        }
+        return ss;
+    }
 
     public static void main(String[] args) throws Exception {
         LogManager.getLogManager().readConfiguration(Todo.class.getClassLoader().getResourceAsStream("logging.properties"));
@@ -41,8 +58,9 @@ public class Todo {
         while ((s = lnr.readLine()) != null){
             ss = s.split(";", -1);
             for (int i = 0; i < languages.size(); i++){
-                CONFIG_BY_CODE.put(String.format("%s-%s", ss[1], languages.get(i)), ss[i + 2]);
-                CONFIG_BY_NAME.put(String.format("%s-%s", ss[0], languages.get(i)), ss[i + 2]);
+                final String language = languages.get(i);
+                putCode(language, ss[1], ss[i + 2]);
+                putCode(language, ss[0], ss[i + 2]);
             }
         }
         lnr.close();
@@ -53,10 +71,10 @@ public class Todo {
         while ((s = lnr.readLine()) != null){
             final LineInfoRecord rec = new LineInfoRecord(s);
             if (rec.getLine().length() > 0){
-                OPTIFLEET.put(rec.getLine(), rec);
+                LINE_INFO_BY_LINE.put(rec.getLine(), rec);
             }
         }
-        LOGGER.debug("count of lines in optifleet: {}", OPTIFLEET.size());
+        LOGGER.debug("count of lines in optifleet line info file: {}", LINE_INFO_BY_LINE.size());
         final String cdrFileName = "Call_data_records_Lhoist France_traffic_201505.txt";
         profiler.start("Reading martyr file");
         lnr = new LineNumberReader(new FileReader("etc/sample/lhoist/input/" + cdrFileName));
@@ -74,7 +92,7 @@ public class Todo {
             if (!rec.isSubscription()){
                 accLineWithoutSubscription.accumulate(new Key(rec.getLine()), rec.getCost());
             }
-            accLineRenaming.accumulate(new Key(rec.getLine(), rec.getRenaming()), rec.getCost());
+            accLineRenaming.accumulate(new Key(rec.getLine(), String.format("%s|%s", rec.getRenaming(), rec.getRemapping())), rec.getCost());
             accLineRemapping.accumulate(new Key(rec.getLine(), rec.getRemapping()), rec.getCost());
             accRemapping.accumulate(new Key(rec.getRemapping()), rec.getCost());
         }
@@ -132,25 +150,23 @@ public class Todo {
         for (final Map.Entry<String, Collection<CallDataRecord>> entry: multimap.asMap().entrySet()){
             final String line = entry.getKey();
             final BigDecimal totalLineCost = totalPerLine.get(line).getCost();
-            final LineInfoRecord lineInfo = OPTIFLEET.get(line);
+            final LineInfoRecord lineInfo = LINE_INFO_BY_LINE.get(line);
             final String language = lineInfo == null || lineInfo.getLanguage() == null ? "EN" : lineInfo.getLanguage();
             zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo == null ? "" : lineInfo.getEmail(), cdrFileName)));
+            pw.printf("%s%n", JOINER.join(getCodes(language, "CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6")));
             final Map<String, CostRecord> costByRenaming = renamingPerLine.get(line);
             for (final Map.Entry<String, CostRecord> renamingEntry: costByRenaming.entrySet()){
                 final String renaming = renamingEntry.getKey();
                 final CostRecord rec = renamingEntry.getValue();
-                String rem = "";
-                String key = String.format("%s-%s", rem, language);
-                pw.printf("%s%n", JOINER.join(new Object[]{ renaming, rem, rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
+                int pipe = renaming.indexOf('|');
+                final String ren = renaming.substring(0, pipe);
+                final String rem = renaming.substring(pipe + 1);
+                pw.printf("%s%n", JOINER.join(new Object[]{ ren, getCode(language, rem), rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
             }
-            pw.printf("%s%n", JOINER.join(new Object[]{"*total cost subscription excluded", "", "", "", totalPerLineWithoutSubscription.containsKey(line) ? totalPerLineWithoutSubscription.get(line).getCost() : BigDecimal.ZERO, ""}));
-            pw.printf("%s%n", JOINER.join(new Object[]{"*total cost line", "", "", "", totalLineCost, ""}));
-            pw.printf("%n");
-            final String[] tableTitles = new String[]{ "TR_1", "TR_2", "TR_3" };
-            for (int i = 0; i < tableTitles.length; i++){
-                tableTitles[i] = CONFIG_BY_CODE.get(String.format("%s-%s", tableTitles[i], language));
-            }
-            pw.printf("%s%n", JOINER.join(tableTitles));
+            pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_7"), "", "", "", totalPerLineWithoutSubscription.containsKey(line) ? totalPerLineWithoutSubscription.get(line).getCost() : BigDecimal.ZERO }));
+            pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_8"), "", "", "", totalLineCost }));
+            pw.println();
+            pw.printf("%s%n", JOINER.join(getCodes(language, "TR_1", "TR_2", "TR_3")));
             final Map<String, CostRecord> costByRemapping = remappingPerLine.get(line);
             for (final Map.Entry<String, CostRecord> remappingEntry: costByRemapping.entrySet()){
                 final String remapping = remappingEntry.getKey();
@@ -159,24 +175,35 @@ public class Todo {
                 if (rec.getCost().signum() != 0){
                     // get average for remapping
                     final BigDecimal deviation = rec.getCost().subtract(totalRec.getCost().divide(lineCount, 4, RoundingMode.CEILING));
-                    pw.printf("%s%n", JOINER.join(remapping, (lineCount.intValue() - positionsPerRemapping.get(remapping).indexOf(line) + 1), deviation));
+                    pw.printf("%s%n", JOINER.join(getCode(language, remapping), (lineCount.intValue() - positionsPerRemapping.get(remapping).indexOf(line) + 1), deviation));
                 }
             }
-            pw.printf("%s%n", JOINER.join("*coût total (Trafic & Abonnements)", (lineCount.intValue() - positions.indexOf(line) + 1), totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
-            pw.printf("%s%n", JOINER.join("*nombre de lignes comparées", lineCount));
+            pw.printf("%s%n", JOINER.join(getCode(language, "TR_14"), (lineCount.intValue() - positions.indexOf(line) + 1), totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
+            pw.printf("%s%n", JOINER.join(getCode(language, "TR_15"), lineCount));
             for (final Map.Entry<Range, Integer> entry2: ranges.entrySet()){
                 if (entry2.getKey().contains(totalLineCost)){
-                    pw.printf("%s%n", JOINER.join("*Votre position", entry2.getValue(), entry2.getValue()));
+                    pw.printf("%s%n", JOINER.join(getCode(language, "TR_2"), entry2.getValue(), entry2.getValue()));
                 } else{
                     pw.printf("%s%n", JOINER.join(entry2.getKey().getLower(), entry2.getValue()));
                 }
             }
-            pw.printf("%nD�tails des appels%nType de trafic;Type d'appel;Destination / r�seau visit�;Date;Num�ro compos�;Unit�s;Co�t%n");
+            pw.println();
+            pw.printf("%s%n", getCode(language, "CD_1"));
+            pw.printf("%s%n", JOINER.join(getCodes(language, "CD_2", "CD_3", "CD_4", "CD_5", "CD_6", "CD_7", "CD_8")));
             final Collection<CallDataRecord> callDataRecords = multimap.get(line);
             if (callDataRecords != null){
                 for (final CallDataRecord rec: callDataRecords){
-                    pw.printf("%s%n", JOINER.join(rec.getRemapping(), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost()));
-                    // TODO 3 more fields
+                    if (!rec.isSubscription()){
+                        final int space = rec.getWhen().indexOf(' ');
+                        String[] ds;
+                        if (space != -1){
+                            ds = rec.getWhen().substring(0, space).split("/");
+                            ds[2] = ds[2].substring(2);
+                        } else{
+                            ds = EMPTY_DATE;
+                        }
+                        pw.printf("%s%n", JOINER.join(getCode(language, rec.getRemapping()), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber().length() == 0 ? NO_NUMBER : rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost(), ds[0], ds[1], ds[2]));
+                    }
                 }
             }
             pw.flush();
