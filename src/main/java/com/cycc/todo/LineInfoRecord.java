@@ -6,13 +6,19 @@ package com.cycc.todo;
 public class LineInfoRecord {
     private final String data;
     private String line;
+    private String name;
     private String email;
     private String language;
+
+    public LineInfoRecord() {
+        this(";;;;;;;EN;");
+    }
 
     public LineInfoRecord(final String data) {
         this.data = data;
         final String[] ss = data.split(";", -1);
         this.line = ss[0];
+        this.name = ss[1];
         this.language = ss[7];
         this.email = ss[8];
     }
@@ -31,5 +37,9 @@ public class LineInfoRecord {
 
     public String getLanguage() {
         return language;
+    }
+
+    public String getName() {
+        return name;
     }
 }

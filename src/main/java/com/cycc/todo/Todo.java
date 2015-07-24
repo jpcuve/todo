@@ -150,18 +150,30 @@ public class Todo {
         final PrintWriter pw = new PrintWriter(zos);
         for (final Map.Entry<String, Collection<CallDataRecord>> entry: multimap.asMap().entrySet()){
             final String line = entry.getKey();
-            final BigDecimal totalLineCost = totalPerLine.get(line).getCost();
-            final LineInfoRecord lineInfo = LINE_INFO_BY_LINE.get(line);
-            final String language = lineInfo == null || lineInfo.getLanguage() == null ? "EN" : lineInfo.getLanguage();
-            zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo == null ? "" : lineInfo.getEmail(), cdrFileName)));
-            pw.printf("%s%n", JOINER.join(getCodes(language, "CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6")));
+            final BigDecimal totalLineCost = totalPerLine.get(line) == null ? BigDecimal.ZERO : totalPerLine.get(line).getCost();
+            final BigDecimal totalLineCostWithoutSubscription = totalPerLineWithoutSubscription.get(line) == null ? BigDecimal.ZERO : totalPerLineWithoutSubscription.get(line).getCost();
+            final int position = lineCount.intValue() - positions.indexOf(line);
+            LineInfoRecord lineInfo = LINE_INFO_BY_LINE.get(line);
+            if (lineInfo == null){
+                lineInfo = new LineInfoRecord();
+            }
+            final String language = lineInfo.getLanguage();
+            zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo.getEmail(), cdrFileName)));
+            pw.printf("%s", JOINER.join(getCodes(language, "CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6")));
+            // todo missing stuff
+            pw.printf(";%s", JOINER.join(totalLineCostWithoutSubscription, totalLineCost, position));
+            // todo missing stuff
+            pw.printf(";%s", JOINER.join(lineInfo.getLine(), lineInfo.getEmail(), lineInfo.getLine(), lineInfo.getName(), lineInfo.getLanguage(), lineInfo.getEmail()));
+            // todo missing stuff
+            pw.printf(";%s", JOINER.join(getCodes(language, "HIST_1", "HIST_2", "HIST_3", "HIST_4", "HIST_5", "HIST_6")));
+            pw.printf(";%s%n", lineCount);
             final Map<Key, CostRecord> costByRenaming = renamingPerLine.get(line);
             for (final Map.Entry<Key, CostRecord> renamingEntry: costByRenaming.entrySet()){
                 final Key renaming = renamingEntry.getKey();
                 final CostRecord rec = renamingEntry.getValue();
                 pw.printf("%s%n", JOINER.join(new Object[]{ renaming.getComponent(0), getCode(language, renaming.getComponent(1).toString()), rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
             }
-            pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_7"), "", "", "", totalPerLineWithoutSubscription.containsKey(line) ? totalPerLineWithoutSubscription.get(line).getCost() : BigDecimal.ZERO }));
+            pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_7"), "", "", "", totalLineCostWithoutSubscription }));
             pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_8"), "", "", "", totalLineCost }));
             pw.println();
             pw.printf("%s%n", JOINER.join(getCodes(language, "TR_1", "TR_2", "TR_3")));
@@ -173,10 +185,10 @@ public class Todo {
                 if (rec.getCost().signum() != 0){
                     // get average for remapping
                     final BigDecimal deviation = rec.getCost().subtract(totalRec.getCost().divide(lineCount, 4, RoundingMode.CEILING));
-                    pw.printf("%s%n", JOINER.join(getCode(language, remapping), (lineCount.intValue() - positionsPerRemapping.get(remapping).indexOf(line) + 1), deviation));
+                    pw.printf("%s%n", JOINER.join(getCode(language, remapping), lineCount.intValue() - positionsPerRemapping.get(remapping).indexOf(line), deviation));
                 }
             }
-            pw.printf("%s%n", JOINER.join(getCode(language, "TR_14"), (lineCount.intValue() - positions.indexOf(line) + 1), totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
+            pw.printf("%s%n", JOINER.join(getCode(language, "TR_14"), position, totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
             pw.printf("%s%n", JOINER.join(getCode(language, "TR_15"), lineCount));
             for (final Map.Entry<Range, Integer> entry2: ranges.entrySet()){
                 if (entry2.getKey().includes(totalLineCost)){
@@ -190,6 +202,7 @@ public class Todo {
             pw.printf("%s%n", JOINER.join(getCodes(language, "CD_2", "CD_3", "CD_4", "CD_5", "CD_6", "CD_7", "CD_8")));
             final Collection<CallDataRecord> callDataRecords = multimap.get(line);
             if (callDataRecords != null){
+                int count = 0;
                 for (final CallDataRecord rec: callDataRecords){
                     if (!rec.isSubscription()){
                         final int space = rec.getWhen().indexOf(' ');
@@ -201,8 +214,10 @@ public class Todo {
                             ds = EMPTY_DATE;
                         }
                         pw.printf("%s%n", JOINER.join(getCode(language, rec.getRemapping()), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber().length() == 0 ? NO_NUMBER : rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost(), ds[0], ds[1], ds[2]));
+                        count++;
                     }
                 }
+                pw.printf("%s%n", JOINER.join(" #Appels/Oproepen/Calls:", count));
             }
             pw.flush();
             zos.closeEntry();
