@@ -132,6 +132,7 @@ public class Todo {
             }
         });
         profiler.start("Computing ranges");
+        final BigDecimal mean = accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING);
         final Map<Range, Integer> ranges = new TreeMap<>();
         for (int i = 0; i < BOUNDARIES.length - 1; i++){
             ranges.put(new Range(BOUNDARIES[i], BOUNDARIES[i + 1]), 0);
@@ -144,6 +145,17 @@ public class Todo {
                 }
             }
         }
+        profiler.start("Computing mean and median");
+        final List<CostRecord> costRecords = new ArrayList<>(totalPerLine.values());
+        Collections.sort(costRecords, new Comparator<CostRecord>() {
+            @Override
+            public int compare(CostRecord cost1, CostRecord cost2) {
+                final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getCost();
+                final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getCost();
+                return c1.subtract(c2).signum();
+            }
+        });
+        final BigDecimal median = costRecords.size() == 0 ? BigDecimal.ZERO : costRecords.get(costRecords.size() / 2).getCost();
         profiler.start("Outputting files");
         final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
         final PrintWriter pw = new PrintWriter(zos);
@@ -163,8 +175,6 @@ public class Todo {
             final Map<Key, CostRecord> costByRenaming = renamingPerLine.get(line);
             zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo.getEmailForMuac(), cdrFileName)));
             pw.printf("%s", JOINER.join(getCodes(language, "CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6")));
-            final BigDecimal mean = BigDecimal.ZERO;
-            final BigDecimal median = BigDecimal.ZERO;
             pw.printf(";;;;;;%s", JOINER.join(totalLineCostWithoutSubscription, totalLineCost, totalLineCountWithoutSubscription, costByRenaming.size(), position, median, mean));
             pw.printf(";%s", JOINER.join(line, lineInfo.getIdentification1(), lineInfo.getLineNumber(), lineInfo.getIdentification1(), lineInfo.getIdentification2(), lineInfo.getDeviceType(), lineInfo.getOwnDevice(), lineInfo.getMuac(), lineInfo.getRanking(), lineInfo.getLanguage(), lineInfo.getEmailForMuac()));
             pw.printf(";%s", JOINER.join("", "")); // reserved1 & reserved2
