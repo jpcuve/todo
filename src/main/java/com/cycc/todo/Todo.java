@@ -73,6 +73,7 @@ public class Todo {
                 LINE_INFO_BY_LINE.put(rec.getLineNumber(), rec);
             }
         }
+        lnr.close();
         LOGGER.debug("count of lines in optifleet line info file: {}", LINE_INFO_BY_LINE.size());
         final String cdrFileName = "Call_data_records_Lhoist France_traffic_201505.txt";
         profiler.start("Reading martyr file");
@@ -83,7 +84,7 @@ public class Todo {
         final CostAccumulator accLineRemapping = new CostAccumulator();
         final CostAccumulator accRemapping = new CostAccumulator();
         final Multimap<String, CallDataRecord> multimap = LinkedHashMultimap.create();
-        s = lnr.readLine();
+        lnr.readLine();
         while ((s = lnr.readLine()) != null){
             final CallDataRecord rec = new CallDataRecord(s.split(";", -1));
             multimap.put(rec.getLine(), rec);
@@ -95,6 +96,7 @@ public class Todo {
             accLineRemapping.accumulate(new Key(rec.getLine(), rec.getRemapping()), rec.getCost());
             accRemapping.accumulate(new Key(rec.getRemapping()), rec.getCost());
         }
+        lnr.close();
         LOGGER.debug("count of lines in cdr: {}", multimap.size());
         profiler.start("Computing summaries");
         final Map<String, CostRecord> totalPerLine = accLine.extractMap();
@@ -232,6 +234,6 @@ public class Todo {
             zos.closeEntry();
         }
         profiler.stop().log();
-        zos.close();
+        pw.close();
     }
 }
