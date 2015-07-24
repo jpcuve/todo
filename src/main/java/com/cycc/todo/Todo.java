@@ -70,8 +70,8 @@ public class Todo {
         s = lnr.readLine();
         while ((s = lnr.readLine()) != null){
             final LineInfoRecord rec = new LineInfoRecord(s);
-            if (rec.getLine().length() > 0){
-                LINE_INFO_BY_LINE.put(rec.getLine(), rec);
+            if (rec.getLineNumber().length() > 0){
+                LINE_INFO_BY_LINE.put(rec.getLineNumber(), rec);
             }
         }
         LOGGER.debug("count of lines in optifleet line info file: {}", LINE_INFO_BY_LINE.size());
@@ -150,24 +150,33 @@ public class Todo {
         final PrintWriter pw = new PrintWriter(zos);
         for (final Map.Entry<String, Collection<CallDataRecord>> entry: multimap.asMap().entrySet()){
             final String line = entry.getKey();
-            final BigDecimal totalLineCost = totalPerLine.get(line) == null ? BigDecimal.ZERO : totalPerLine.get(line).getCost();
-            final BigDecimal totalLineCostWithoutSubscription = totalPerLineWithoutSubscription.get(line) == null ? BigDecimal.ZERO : totalPerLineWithoutSubscription.get(line).getCost();
-            final int position = lineCount.intValue() - positions.indexOf(line);
+            final CostRecord totalLine = totalPerLine.get(line);
+            final BigDecimal totalLineCost = totalLine == null ? BigDecimal.ZERO : totalLine.getCost();
+            final CostRecord totalLineWithoutSubscription = totalPerLineWithoutSubscription.get(line);
+            final BigDecimal totalLineCostWithoutSubscription = totalLineWithoutSubscription == null ? BigDecimal.ZERO : totalLineWithoutSubscription.getCost();
+            final int totalLineCountWithoutSubscription = totalLineWithoutSubscription == null ? 0 : totalLineWithoutSubscription.getCount();
             LineInfoRecord lineInfo = LINE_INFO_BY_LINE.get(line);
             if (lineInfo == null){
                 lineInfo = new LineInfoRecord();
             }
+            final int position = lineInfo.isRanking() ? lineCount.intValue() - positions.indexOf(line) : 0;
             final String language = lineInfo.getLanguage();
-            zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo.getEmail(), cdrFileName)));
+            final Map<Key, CostRecord> costByRenaming = renamingPerLine.get(line);
+            zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", entry.getKey(), lineInfo.getEmailForMuac(), cdrFileName)));
             pw.printf("%s", JOINER.join(getCodes(language, "CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6")));
-            // todo missing stuff
-            pw.printf(";%s", JOINER.join(totalLineCostWithoutSubscription, totalLineCost, position));
-            // todo missing stuff
-            pw.printf(";%s", JOINER.join(lineInfo.getLine(), lineInfo.getEmail(), lineInfo.getLine(), lineInfo.getName(), lineInfo.getLanguage(), lineInfo.getEmail()));
-            // todo missing stuff
+            final BigDecimal mean = BigDecimal.ZERO;
+            final BigDecimal median = BigDecimal.ZERO;
+            pw.printf(";;;;;;%s", JOINER.join(totalLineCostWithoutSubscription, totalLineCost, totalLineCountWithoutSubscription, costByRenaming.size(), position, median, mean));
+            pw.printf(";%s", JOINER.join(line, lineInfo.getIdentification1(), lineInfo.getLineNumber(), lineInfo.getIdentification1(), lineInfo.getIdentification2(), lineInfo.getDeviceType(), lineInfo.getOwnDevice(), lineInfo.getMuac(), lineInfo.getRanking(), lineInfo.getLanguage(), lineInfo.getEmailForMuac()));
+            pw.printf(";%s", JOINER.join("", "")); // reserved1 & reserved2
+            pw.printf(";%s", JOINER.join(lineInfo.getCompany(), lineInfo.getSite(), lineInfo.getGroupDepartment(), lineInfo.getUserId(), lineInfo.getCostCenter(), lineInfo.getAccountNumber(), lineInfo.getSubAccountNumber(), lineInfo.getProjectId(), lineInfo.getMnoProvider(), lineInfo.getMnoAccountNumber(), lineInfo.getCustomerAccountNumber()));
+            pw.printf(";%s", ""); // reserved3
+            pw.printf(";%s", JOINER.join(lineInfo.getManagerEmail1(), lineInfo.getManagerEmail2(), lineInfo.getBccEmail(), lineInfo.getDynamicWarning1(), lineInfo.getDynamicWarning2()));
+            pw.printf(";%s", JOINER.join("", "", "")); // reserved4, reserved5 & reserved6
+            pw.printf(";%s", JOINER.join(lineInfo.getDataNationalMb(), lineInfo.getDataNationalSub(), lineInfo.getDataRoamingMb(), lineInfo.getDataRoamingSub(), lineInfo.getThresholdAmount(), lineInfo.getBudget(), lineInfo.getThresholdAmountVoice()));
+            pw.printf(";%s", JOINER.join("", "", "")); // reserved7, reserved8 & reserved9
             pw.printf(";%s", JOINER.join(getCodes(language, "HIST_1", "HIST_2", "HIST_3", "HIST_4", "HIST_5", "HIST_6")));
             pw.printf(";%s%n", lineCount);
-            final Map<Key, CostRecord> costByRenaming = renamingPerLine.get(line);
             for (final Map.Entry<Key, CostRecord> renamingEntry: costByRenaming.entrySet()){
                 final Key renaming = renamingEntry.getKey();
                 final CostRecord rec = renamingEntry.getValue();
@@ -202,7 +211,6 @@ public class Todo {
             pw.printf("%s%n", JOINER.join(getCodes(language, "CD_2", "CD_3", "CD_4", "CD_5", "CD_6", "CD_7", "CD_8")));
             final Collection<CallDataRecord> callDataRecords = multimap.get(line);
             if (callDataRecords != null){
-                int count = 0;
                 for (final CallDataRecord rec: callDataRecords){
                     if (!rec.isSubscription()){
                         final int space = rec.getWhen().indexOf(' ');
@@ -214,10 +222,9 @@ public class Todo {
                             ds = EMPTY_DATE;
                         }
                         pw.printf("%s%n", JOINER.join(getCode(language, rec.getRemapping()), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber().length() == 0 ? NO_NUMBER : rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost(), ds[0], ds[1], ds[2]));
-                        count++;
                     }
                 }
-                pw.printf("%s%n", JOINER.join(" #Appels/Oproepen/Calls:", count));
+                pw.printf("%s%n", JOINER.join(" #Appels/Oproepen/Calls:", totalLineCountWithoutSubscription));
             }
             pw.flush();
             zos.closeEntry();
