@@ -21,7 +21,6 @@ public class Todo {
     private static final Logger LOGGER = LoggerFactory.getLogger(Todo.class);
     private static final Joiner JOINER = Joiner.on(";");
     private static final int[] BOUNDARIES = {0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 300, 3000, Integer.MAX_VALUE };
-    private static final String[] EMPTY_DATE = { "", "", "" };
     private static final String NO_NUMBER = "No Number";
     private final static Map<Key, String> CONFIG = new HashMap<>();
     private final static Map<String, LineInfoRecord> LINE_INFO_BY_LINE = new HashMap<>();
@@ -213,14 +212,7 @@ public class Todo {
             if (callDataRecords != null){
                 for (final CallDataRecord rec: callDataRecords){
                     if (!rec.isSubscription()){
-                        final int space = rec.getWhen().indexOf(' ');
-                        String[] ds;
-                        if (space != -1){
-                            ds = rec.getWhen().substring(0, space).split("/");
-                            ds[2] = ds[2].substring(2);
-                        } else{
-                            ds = EMPTY_DATE;
-                        }
+                        final String ds[]  = rec.getWhenDateAsCommaSeparatedString();
                         pw.printf("%s%n", JOINER.join(getCode(language, rec.getRemapping()), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber().length() == 0 ? NO_NUMBER : rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost(), ds[0], ds[1], ds[2]));
                     }
                 }

@@ -8,6 +8,7 @@ import java.math.RoundingMode;
  */
 public class CallDataRecord {
     public static final BigDecimal SIXTY = new BigDecimal(60.0);
+    private static final String[] EMPTY_DATE = { "", "", "" };
     private String line;
     private String renaming;
     private String histogram;
@@ -40,6 +41,18 @@ public class CallDataRecord {
             units = units.divide(SIXTY, RoundingMode.CEILING).setScale(4, BigDecimal.ROUND_CEILING);
         }
         this.cost = new CostRecord(1, units, new BigDecimal(data[26 + 17]).setScale(4, BigDecimal.ROUND_CEILING));
+    }
+
+    public String[] getWhenDateAsCommaSeparatedString(){
+        final int space = when == null ? -1 : when.indexOf(' ');
+        String[] ds;
+        if (space >= 0){
+            ds = when.substring(0, space).split("/");
+            ds[2] = ds[2].substring(2);
+        } else{
+            ds = EMPTY_DATE;
+        }
+        return ds;
     }
 
     public Key getKey(){
