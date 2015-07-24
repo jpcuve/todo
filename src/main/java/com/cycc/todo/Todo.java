@@ -156,7 +156,7 @@ public class Todo {
             final int totalLineCountWithoutSubscription = totalLineWithoutSubscription == null ? 0 : totalLineWithoutSubscription.getCount();
             LineInfoRecord lineInfo = LINE_INFO_BY_LINE.get(line);
             if (lineInfo == null){
-                lineInfo = new LineInfoRecord();
+                lineInfo = LineInfoRecord.DEFAULT;
             }
             final int position = lineInfo.isRanking() ? lineCount.intValue() - positions.indexOf(line) : 0;
             final String language = lineInfo.getLanguage();

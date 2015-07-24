@@ -4,6 +4,7 @@ package com.cycc.todo;
  * Created by jpc on 3/07/2015.
  */
 public class LineInfoRecord {
+    public static final LineInfoRecord DEFAULT = new LineInfoRecord(";;;;;;;EN;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
     private final String data;
     private String lineNumber;
     private String identification1;
@@ -46,10 +47,6 @@ public class LineInfoRecord {
     private String dateModification;
     private String commentModification;
     private String formuleAbonnement;
-
-    public LineInfoRecord() {
-        this(";;;;;;;EN;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
-    }
 
     public LineInfoRecord(final String data) {
         this.data = data;
