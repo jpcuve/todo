@@ -9,23 +9,15 @@ import java.math.RoundingMode;
 public class CallDataRecord {
     public static final BigDecimal SIXTY = new BigDecimal(60.0);
     private static final String[] EMPTY_DATE = { "", "", "" };
-    private String line;
-    private String renaming;
-    private String histogram;
-    private String remapping;
-    private String destinationService;
-    private String destinationNumber;
-    private String when;
-    private boolean included;
-    private CostRecord cost;
-
-    public CallDataRecord() {
-    }
-
-    public CallDataRecord(String renaming){
-        this.renaming = renaming;
-        this.cost = new CostRecord();
-    }
+    private final String line;
+    private final String renaming;
+    private final String histogram;
+    private final String remapping;
+    private final String destinationService;
+    private final String destinationNumber;
+    private final String when;
+    private final boolean included;
+    private final CostRecord cost;
 
     public CallDataRecord(final String[] data) {
         this.line = data[26 + 0];
@@ -40,17 +32,18 @@ public class CallDataRecord {
         if ("DURATION".equals(data[26 + 11])){
             units = units.divide(SIXTY, RoundingMode.CEILING).setScale(4, BigDecimal.ROUND_CEILING);
         }
-        this.cost = new CostRecord(1, units, new BigDecimal(data[26 + 17]).setScale(4, BigDecimal.ROUND_CEILING));
+        final BigDecimal amountGross = new BigDecimal(data[26 + 15]).setScale(4, BigDecimal.ROUND_CEILING);
+        final BigDecimal amountNet = new BigDecimal(data[26 + 16]).setScale(4, BigDecimal.ROUND_CEILING);
+        final BigDecimal amountForHistogram = new BigDecimal(data[26 + 17]).setScale(4, BigDecimal.ROUND_CEILING);
+        final BigDecimal amountForMuac = new BigDecimal(data[26 + 18]).setScale(4, BigDecimal.ROUND_CEILING);
+        this.cost = new CostRecord(1, units, amountGross, amountNet, amountForHistogram, amountForMuac);
     }
 
     public String[] getWhenDateAsCommaSeparatedString(){
-        final int space = when == null ? -1 : when.indexOf(' ');
-        String[] ds;
-        if (space >= 0){
-            ds = when.substring(0, space).split("/");
+        String[] ds = EMPTY_DATE;
+        if (when != null && when.length() > 0){
+            ds = when.substring(0, when.indexOf(' ')).split("/");
             ds[2] = ds[2].substring(2);
-        } else{
-            ds = EMPTY_DATE;
         }
         return ds;
     }

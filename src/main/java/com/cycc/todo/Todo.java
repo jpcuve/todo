@@ -1,7 +1,5 @@
 package com.cycc.todo;
 
-import com.google.common.base.Joiner;
-import com.google.common.collect.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.profiler.Profiler;
@@ -83,11 +81,16 @@ public class Todo {
         final CostAccumulator accLineRenaming = new CostAccumulator();
         final CostAccumulator accLineRemapping = new CostAccumulator();
         final CostAccumulator accRemapping = new CostAccumulator();
-        final Multimap<String, CallDataRecord> multimap = LinkedHashMultimap.create();
+        final Map<String, List<CallDataRecord>> multimap = new LinkedHashMap<>();
         lnr.readLine();
         while ((s = lnr.readLine()) != null){
             final CallDataRecord rec = new CallDataRecord(s.split(";", -1));
-            multimap.put(rec.getLine(), rec);
+            List<CallDataRecord> list = multimap.get(rec.getLine());
+            if (list == null){
+                list = new ArrayList<>();
+                multimap.put(rec.getLine(), list);
+            }
+            list.add(rec);
             accLine.accumulate(new Key(rec.getLine()), rec.getCost());
             if (!rec.isSubscription()){
                 accLineWithoutSubscription.accumulate(new Key(rec.getLine()), rec.getCost());
@@ -115,8 +118,8 @@ public class Todo {
                 public int compare(String line1, String line2) {
                     final CostRecord cost1 = remappingPerLine.get(line1).get(remapping);
                     final CostRecord cost2 = remappingPerLine.get(line2).get(remapping);
-                    final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getCost();
-                    final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getCost();
+                    final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getAmountForHistogram();
+                    final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getAmountForHistogram();
                     return c1.subtract(c2).signum();
                 }
             });
@@ -128,19 +131,19 @@ public class Todo {
             public int compare(String line1, String line2) {
                 final CostRecord cost1 = totalPerLine.get(line1);
                 final CostRecord cost2 = totalPerLine.get(line2);
-                final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getCost();
-                final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getCost();
+                final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getAmountForHistogram();
+                final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getAmountForHistogram();
                 return c1.subtract(c2).signum();
             }
         });
         profiler.start("Computing ranges");
-        final BigDecimal mean = accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING);
+        final BigDecimal mean = accLine.getTotal().getAmountForHistogram().divide(lineCount, 4, BigDecimal.ROUND_CEILING);
         final Map<Range, Integer> ranges = new TreeMap<>();
         for (int i = 0; i < BOUNDARIES.length - 1; i++){
             ranges.put(new Range(BOUNDARIES[i], BOUNDARIES[i + 1]), 0);
         }
         for (final CostRecord rec: totalPerLine.values()){
-            final BigDecimal cost = rec.getCost();
+            final BigDecimal cost = rec.getAmountForHistogram();
             for (final Map.Entry<Range, Integer> entry: ranges.entrySet()){
                 if (entry.getKey().includes(cost)){
                     entry.setValue(entry.getValue() + 1);
@@ -152,21 +155,21 @@ public class Todo {
         Collections.sort(costRecords, new Comparator<CostRecord>() {
             @Override
             public int compare(CostRecord cost1, CostRecord cost2) {
-                final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getCost();
-                final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getCost();
+                final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getAmountForHistogram();
+                final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getAmountForHistogram();
                 return c1.subtract(c2).signum();
             }
         });
-        final BigDecimal median = costRecords.size() == 0 ? BigDecimal.ZERO : costRecords.get(costRecords.size() / 2).getCost();
+        final BigDecimal median = costRecords.size() == 0 ? BigDecimal.ZERO : costRecords.get(costRecords.size() / 2).getAmountForHistogram();
         profiler.start("Outputting files");
         final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
         final PrintWriter pw = new PrintWriter(zos);
-        for (final Map.Entry<String, Collection<CallDataRecord>> entry: multimap.asMap().entrySet()){
+        for (final Map.Entry<String, List<CallDataRecord>> entry: multimap.entrySet()){
             final String line = entry.getKey();
             final CostRecord totalLine = totalPerLine.get(line);
-            final BigDecimal totalLineCost = totalLine == null ? BigDecimal.ZERO : totalLine.getCost();
+            final BigDecimal totalLineCost = totalLine == null ? BigDecimal.ZERO : totalLine.getAmountForHistogram();
             final CostRecord totalLineWithoutSubscription = totalPerLineWithoutSubscription.get(line);
-            final BigDecimal totalLineCostWithoutSubscription = totalLineWithoutSubscription == null ? BigDecimal.ZERO : totalLineWithoutSubscription.getCost();
+            final BigDecimal totalLineCostWithoutSubscription = totalLineWithoutSubscription == null ? BigDecimal.ZERO : totalLineWithoutSubscription.getAmountForHistogram();
             final int totalLineCountWithoutSubscription = totalLineWithoutSubscription == null ? 0 : totalLineWithoutSubscription.getCount();
             LineInfoRecord lineInfo = LINE_INFO_BY_LINE.get(line);
             if (lineInfo == null){
@@ -191,7 +194,7 @@ public class Todo {
             for (final Map.Entry<Key, CostRecord> renamingEntry: costByRenaming.entrySet()){
                 final Key renaming = renamingEntry.getKey();
                 final CostRecord rec = renamingEntry.getValue();
-                pw.printf("%s%n", JOINER.join(new Object[]{ renaming.getComponent(0), getCode(language, renaming.getComponent(1).toString()), rec.getCount(), rec.getUnits(), rec.getCost(), rec.getCostPerUnit()}));
+                pw.printf("%s%n", JOINER.join(new Object[]{ renaming.getComponent(0), getCode(language, renaming.getComponent(1).toString()), rec.getCount(), rec.getUnits(), rec.getAmountForHistogram(), rec.getCostPerUnit()}));
             }
             pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_7"), "", "", "", totalLineCostWithoutSubscription }));
             pw.printf("%s%n", JOINER.join(new Object[]{ getCode(language, "CS_8"), "", "", "", totalLineCost }));
@@ -202,13 +205,13 @@ public class Todo {
                 final String remapping = remappingEntry.getKey();
                 final CostRecord rec = remappingEntry.getValue();
                 final CostRecord totalRec = remappingTotal.get(remapping);
-                if (rec.getCost().signum() != 0){
+                if (rec.getAmountForHistogram().signum() != 0){
                     // get average for remapping
-                    final BigDecimal deviation = rec.getCost().subtract(totalRec.getCost().divide(lineCount, 4, RoundingMode.CEILING));
+                    final BigDecimal deviation = rec.getAmountForHistogram().subtract(totalRec.getAmountForHistogram().divide(lineCount, 4, RoundingMode.CEILING));
                     pw.printf("%s%n", JOINER.join(getCode(language, remapping), lineCount.intValue() - positionsPerRemapping.get(remapping).indexOf(line), deviation));
                 }
             }
-            pw.printf("%s%n", JOINER.join(getCode(language, "TR_14"), position, totalLineCost.subtract(accLine.getTotal().getCost().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
+            pw.printf("%s%n", JOINER.join(getCode(language, "TR_14"), position, totalLineCost.subtract(accLine.getTotal().getAmountForHistogram().divide(lineCount, 4, BigDecimal.ROUND_CEILING))));
             pw.printf("%s%n", JOINER.join(getCode(language, "TR_15"), lineCount));
             for (final Map.Entry<Range, Integer> entry2: ranges.entrySet()){
                 if (entry2.getKey().includes(totalLineCost)){
@@ -225,7 +228,7 @@ public class Todo {
                 for (final CallDataRecord rec: callDataRecords){
                     if (!rec.isSubscription()){
                         final String ds[]  = rec.getWhenDateAsCommaSeparatedString();
-                        pw.printf("%s%n", JOINER.join(getCode(language, rec.getRemapping()), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber().length() == 0 ? NO_NUMBER : rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getCost(), ds[0], ds[1], ds[2]));
+                        pw.printf("%s%n", JOINER.join(getCode(language, rec.getRemapping()), rec.getRenaming(), rec.getDestinationService(), rec.getWhen(), rec.getDestinationNumber().length() == 0 ? NO_NUMBER : rec.getDestinationNumber(), rec.getCost().getUnits(), rec.getCost().getAmountForHistogram(), ds[0], ds[1], ds[2]));
                     }
                 }
                 pw.printf("%s%n", JOINER.join(" #Appels/Oproepen/Calls:", totalLineCountWithoutSubscription));
