@@ -6,6 +6,7 @@ import java.math.BigDecimal;
  * Created by jpc on 7/8/15.
  */
 public class CostRecord {
+    public static final CostRecord ZERO = new CostRecord(1, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO);
     private final int count;
     private final BigDecimal units;
     private final BigDecimal amountGross;
@@ -20,6 +21,10 @@ public class CostRecord {
         this.amountNet = amountNet;
         this.amountForHistogram = amountForHistogram;
         this.amountForMuac = amountForMuac;
+    }
+
+    public static CostRecord combine(CostRecord cr1, CostRecord cr2){
+        return new CostRecord(cr1.count + cr2.count, cr1.units.add(cr2.units), cr1.amountGross.add(cr2.amountGross), cr1.amountNet.add(cr2.amountNet), cr1.amountForHistogram.add(cr2.amountForHistogram), cr1.amountForMuac.add(cr2.amountForMuac));
     }
 
     public int getCount() {

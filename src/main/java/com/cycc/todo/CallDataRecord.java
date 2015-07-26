@@ -19,6 +19,10 @@ public class CallDataRecord {
     private final boolean included;
     private final CostRecord cost;
 
+    public CallDataRecord(String s){
+        this(s.split(";", -1));
+    }
+
     public CallDataRecord(final String[] data) {
         this.line = data[26 + 0];
         this.histogram = data[26 + 3];
@@ -46,10 +50,6 @@ public class CallDataRecord {
             ds[2] = ds[2].substring(2);
         }
         return ds;
-    }
-
-    public Key getKey(){
-        return new Key(line, renaming, remapping);
     }
 
     public CostRecord getCost() {
