@@ -11,6 +11,7 @@ import java.util.*;
 import java.util.logging.LogManager;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -41,7 +42,7 @@ public class Todo {
     }
 
     private static String join(Object... os){
-        return Arrays.asList(os).stream().map(Object::toString).collect(Collectors.joining(";"));
+        return Stream.of(os).map(Object::toString).collect(Collectors.joining(";"));
     }
 
     public static void main(String[] args) throws Exception {
