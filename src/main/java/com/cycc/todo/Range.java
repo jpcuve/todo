@@ -1,33 +1,27 @@
 package com.cycc.todo;
 
-import java.math.BigDecimal;
-
 /**
  * Created by jpc on 7/23/15.
  */
 public class Range implements Comparable<Range> {
-    private final BigDecimal lower;
-    private final BigDecimal upper;
+    private final double lower;
+    private final double upper;
 
-    public Range(int lower, int upper){
-        this(new BigDecimal(lower), new BigDecimal(upper));
-    }
-
-    public Range(BigDecimal lower, BigDecimal upper) {
+    public Range(double lower, double upper) {
         this.lower = lower;
         this.upper = upper;
     }
 
-    public BigDecimal getLower() {
+    public double getLower() {
         return lower;
     }
 
-    public BigDecimal getUpper() {
+    public double getUpper() {
         return upper;
     }
 
-    public boolean includes(BigDecimal test){
-        return test.compareTo(lower) >= 0 && test.compareTo(upper) < 0;
+    public boolean includes(double test){
+        return Math.signum(test - lower) >= 0 && Math.signum(test - upper) < 0;
     }
 
     @Override
@@ -35,6 +29,6 @@ public class Range implements Comparable<Range> {
         if (o == null){
             return 1;
         }
-        return lower.compareTo(o.lower);
+        return (int) Math.signum(lower - o.lower);
     }
 }

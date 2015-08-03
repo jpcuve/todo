@@ -1,20 +1,18 @@
 package com.cycc.todo;
 
-import java.math.BigDecimal;
-
 /**
  * Created by jpc on 7/8/15.
  */
 public class CostRecord {
-    public static final CostRecord ZERO = new CostRecord(1, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO, BigDecimal.ZERO);
+    public static final CostRecord ZERO = new CostRecord(1, 0.0, 0.0, 0.0, 0.0, 0.0);
     private final int count;
-    private final BigDecimal units;
-    private final BigDecimal amountGross;
-    private final BigDecimal amountNet;
-    private final BigDecimal amountForHistogram;
-    private final BigDecimal amountForMuac;
+    private final double units;
+    private final double amountGross;
+    private final double amountNet;
+    private final double amountForHistogram;
+    private final double amountForMuac;
 
-    public CostRecord(int count, BigDecimal units, BigDecimal amountGross, BigDecimal amountNet, BigDecimal amountForHistogram, BigDecimal amountForMuac) {
+    public CostRecord(int count, double units, double amountGross, double amountNet, double amountForHistogram, double amountForMuac) {
         this.count = count;
         this.units = units;
         this.amountGross = amountGross;
@@ -24,34 +22,34 @@ public class CostRecord {
     }
 
     public static CostRecord combine(CostRecord cr1, CostRecord cr2){
-        return new CostRecord(cr1.count + cr2.count, cr1.units.add(cr2.units), cr1.amountGross.add(cr2.amountGross), cr1.amountNet.add(cr2.amountNet), cr1.amountForHistogram.add(cr2.amountForHistogram), cr1.amountForMuac.add(cr2.amountForMuac));
+        return new CostRecord(cr1.count + cr2.count, cr1.units + cr2.units, cr1.amountGross + cr2.amountGross, cr1.amountNet + cr2.amountNet, cr1.amountForHistogram + cr2.amountForHistogram, cr1.amountForMuac + cr2.amountForMuac);
     }
 
     public int getCount() {
         return count;
     }
 
-    public BigDecimal getUnits() {
+    public double getUnits() {
         return units;
     }
 
-    public BigDecimal getAmountGross() {
+    public double getAmountGross() {
         return amountGross;
     }
 
-    public BigDecimal getAmountNet() {
+    public double getAmountNet() {
         return amountNet;
     }
 
-    public BigDecimal getAmountForHistogram() {
+    public double getAmountForHistogram() {
         return amountForHistogram;
     }
 
-    public BigDecimal getAmountForMuac() {
+    public double getAmountForMuac() {
         return amountForMuac;
     }
 
-    public BigDecimal getCostPerUnit(){
-        return units.signum() == 0 ? BigDecimal.ZERO : amountForHistogram.divide(units, 4, BigDecimal.ROUND_CEILING);
+    public double getCostPerUnit(){
+        return units == 0 ? 0 : amountForHistogram / units;
     }
 }

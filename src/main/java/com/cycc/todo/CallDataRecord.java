@@ -1,13 +1,9 @@
 package com.cycc.todo;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-
 /**
  * Created by jpc on 3/07/2015.
  */
-public class CallDataRecord {
-    public static final BigDecimal SIXTY = new BigDecimal(60.0);
+public class CallDataRecord implements Comparable<CallDataRecord> {
     private static final String[] EMPTY_DATE = { "", "", "" };
     private final String line;
     private final String renaming;
@@ -32,14 +28,14 @@ public class CallDataRecord {
         this.destinationNumber = data[26 + 7];
         this.when = data[26 + 10];
         this.included = Boolean.parseBoolean(data[26 + 19]);
-        BigDecimal units = new BigDecimal(data[26 + 12]).setScale(4, BigDecimal.ROUND_CEILING);
+        double units = Double.parseDouble(data[26 + 12]);
         if ("DURATION".equals(data[26 + 11])){
-            units = units.divide(SIXTY, RoundingMode.CEILING).setScale(4, BigDecimal.ROUND_CEILING);
+            units = units / 60.0;
         }
-        final BigDecimal amountGross = new BigDecimal(data[26 + 15]).setScale(4, BigDecimal.ROUND_CEILING);
-        final BigDecimal amountNet = new BigDecimal(data[26 + 16]).setScale(4, BigDecimal.ROUND_CEILING);
-        final BigDecimal amountForHistogram = new BigDecimal(data[26 + 17]).setScale(4, BigDecimal.ROUND_CEILING);
-        final BigDecimal amountForMuac = new BigDecimal(data[26 + 18]).setScale(4, BigDecimal.ROUND_CEILING);
+        final double amountGross = Double.parseDouble(data[26 + 15]);
+        final double amountNet = Double.parseDouble(data[26 + 16]);
+        final double amountForHistogram = Double.parseDouble(data[26 + 17]);
+        final double amountForMuac = Double.parseDouble(data[26 + 18]);
         this.cost = new CostRecord(1, units, amountGross, amountNet, amountForHistogram, amountForMuac);
     }
 
@@ -90,5 +86,10 @@ public class CallDataRecord {
 
     public boolean isSubscription(){
         return "SUBSCRIPTION".equals(histogram);
+    }
+
+    @Override
+    public int compareTo(CallDataRecord o) {
+        return when.compareTo(o.when);
     }
 }

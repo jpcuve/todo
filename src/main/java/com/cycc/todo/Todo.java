@@ -5,8 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.profiler.Profiler;
 
 import java.io.*;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.*;
@@ -62,44 +60,43 @@ public class Todo {
         profiler.start("Reading martyr file");
         final String cdrFileName = "Call_data_records_Lhoist France_traffic_201505.txt";
         final File fMartyr = new File("etc/sample/lhoist/input/" + cdrFileName);
-        final Map<String, List<CallDataRecord>> martyrs = Files
+        final Map<String, List<CallDataRecord>> martyrsByLine = Files
                 .lines(fMartyr.toPath(), StandardCharsets.ISO_8859_1)
                 .skip(1)
                 .map(CallDataRecord::new)
+                .sorted()
                 .collect(Collectors.groupingBy(CallDataRecord::getLine));
-        LOGGER.debug("count of lines in martyr file: {}", martyrs.size());
-        final List<CallDataRecord> cdrs = new ArrayList<>();
-        for (final List<CallDataRecord> list: martyrs.values()){
-            cdrs.addAll(list);
-        }
-        final CostRecord total = cdrs.stream().map(CallDataRecord::getCost).reduce(CostRecord.ZERO, CostRecord::combine);
+        LOGGER.debug("count of lines in martyr file: {}", martyrsByLine.size());
+        final List<CallDataRecord> martyrs = new ArrayList<>();
+        martyrsByLine.values().stream().forEach(martyrs::addAll);
+        final CostRecord total = martyrs.stream().map(CallDataRecord::getCost).reduce(CostRecord.ZERO, CostRecord::combine);
         profiler.start("Computing summaries");
         final Collector<CallDataRecord, ?, CostRecord> reducing = Collectors.reducing(CostRecord.ZERO, CallDataRecord::getCost, CostRecord::combine);
-        final Map<String, CostRecord> totalPerLine = cdrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, reducing));
-        final Map<String, CostRecord> totalPerLineWithoutSubscription = cdrs.stream().filter(cdr -> !cdr.isSubscription()).collect(Collectors.groupingBy(CallDataRecord::getLine, reducing));
-        final Map<String, Map<String, CostRecord>> totalPerLinePerRemapping = cdrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRemapping, reducing)));
-        final Map<String, Map<String, CostRecord>> totalPerLinePerRenaming = cdrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRenaming, reducing)));
-        final Map<String, CostRecord> totalPerRemapping = cdrs.stream().collect(Collectors.groupingBy(CallDataRecord::getRemapping, reducing));
-        final Map<String, String> remappingPerRenaming = cdrs.stream().collect(Collectors.groupingBy(CallDataRecord::getRenaming, Collectors.reducing(null, CallDataRecord::getRemapping, (remapping1, remapping2) -> remapping2)));
+        final Map<String, CostRecord> totalPerLine = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, reducing));
+        final Map<String, CostRecord> totalPerLineWithoutSubscription = martyrs.stream().filter(cdr -> !cdr.isSubscription()).collect(Collectors.groupingBy(CallDataRecord::getLine, reducing));
+        final Map<String, Map<String, CostRecord>> totalPerLinePerRemapping = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRemapping, reducing)));
+        final Map<String, Map<String, CostRecord>> totalPerLinePerRenaming = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRenaming, reducing)));
+        final Map<String, CostRecord> totalPerRemapping = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getRemapping, reducing));
+        final Map<String, String> remappingPerRenaming = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getRenaming, Collectors.reducing(null, CallDataRecord::getRemapping, (remapping1, remapping2) -> remapping2)));
         final Set<String> lines = new TreeSet<>(totalPerLine.keySet());
-        final BigDecimal lineCount = new BigDecimal(lines.size());
+        final int lineCount = lines.size();
         profiler.start("Computing positions");
         final Map<String, List<String>> positionsPerRemapping2 = new HashMap<>();
         for (final String remapping: totalPerRemapping.keySet()){
             positionsPerRemapping2.put(remapping, totalPerLine.keySet().stream().sorted((line1, line2) -> {
                 final CostRecord cost1 = totalPerLinePerRemapping.get(line1).get(remapping);
                 final CostRecord cost2 = totalPerLinePerRemapping.get(line2).get(remapping);
-                final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getAmountForHistogram();
-                final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getAmountForHistogram();
-                return c1.subtract(c2).signum();
+                final double c1 = cost1 == null ? 0 : cost1.getAmountForHistogram();
+                final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
+                return (int) Math.signum(c1 - c2);
             }).collect(Collectors.toList()));
         }
         final List<String> positions2 = totalPerLine.keySet().stream().sorted((line1, line2) -> {
             final CostRecord cost1 = totalPerLine.get(line1);
             final CostRecord cost2 = totalPerLine.get(line2);
-            final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getAmountForHistogram();
-            final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getAmountForHistogram();
-            return c1.subtract(c2).signum();
+            final double c1 = cost1 == null ? 0 : cost1.getAmountForHistogram();
+            final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
+            return (int) Math.signum(c1 - c2);
         }).collect(Collectors.toList());
         profiler.start("Computing ranges");
         final Map<Range, Integer> ranges = new TreeMap<>();
@@ -107,7 +104,7 @@ public class Todo {
             ranges.put(new Range(BOUNDARIES[i], BOUNDARIES[i + 1]), 0);
         }
         for (final CostRecord rec: totalPerLine.values()){
-            final BigDecimal cost = rec.getAmountForHistogram();
+            final double cost = rec.getAmountForHistogram();
             for (final Map.Entry<Range, Integer> entry: ranges.entrySet()){
                 if (entry.getKey().includes(cost)){
                     entry.setValue(entry.getValue() + 1);
@@ -115,30 +112,30 @@ public class Todo {
             }
         }
         profiler.start("Computing mean and median");
-        final BigDecimal mean = total.getAmountForHistogram().divide(lineCount, 4, BigDecimal.ROUND_CEILING);
+        final double mean = total.getAmountForHistogram() / lineCount;
         final List<CostRecord> costRecords2 = totalPerLine.values().stream().sorted((cost1, cost2) -> {
-            final BigDecimal c1 = cost1 == null ? BigDecimal.ZERO : cost1.getAmountForHistogram();
-            final BigDecimal c2 = cost2 == null ? BigDecimal.ZERO : cost2.getAmountForHistogram();
-            return c1.subtract(c2).signum();
+            final double c1 = cost1 == null ? 0 : cost1.getAmountForHistogram();
+            final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
+            return (int) Math.signum(c1 - c2);
         }).collect(Collectors.toList());
-        final BigDecimal median = costRecords2.size() == 0 ? BigDecimal.ZERO : costRecords2.get(costRecords2.size() / 2).getAmountForHistogram();
+        final double median = costRecords2.size() == 0 ? 0 : costRecords2.get(costRecords2.size() / 2).getAmountForHistogram();
         profiler.start("Outputting files");
         try (
                 final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
                 final PrintWriter pw = new PrintWriter(zos)
         ){
-            for (final Map.Entry<String, List<CallDataRecord>> entry: martyrs.entrySet()){
+            for (final Map.Entry<String, List<CallDataRecord>> entry: martyrsByLine.entrySet()){
                 final String line = entry.getKey();
                 final CostRecord totalLine = totalPerLine.get(line);
-                final BigDecimal totalLineCost = totalLine == null ? BigDecimal.ZERO : totalLine.getAmountForHistogram();
+                final double totalLineCost = totalLine == null ? 0 : totalLine.getAmountForHistogram();
                 final CostRecord totalLineWithoutSubscription = totalPerLineWithoutSubscription.get(line);
-                final BigDecimal totalLineCostWithoutSubscription = totalLineWithoutSubscription == null ? BigDecimal.ZERO : totalLineWithoutSubscription.getAmountForHistogram();
+                final double totalLineCostWithoutSubscription = totalLineWithoutSubscription == null ? 0 : totalLineWithoutSubscription.getAmountForHistogram();
                 final int totalLineCountWithoutSubscription = totalLineWithoutSubscription == null ? 0 : totalLineWithoutSubscription.getCount();
                 LineInfoRecord lineInfo = lineInfoByLine.get(line);
                 if (lineInfo == null){
                     lineInfo = LineInfoRecord.DEFAULT;
                 }
-                final int position = lineInfo.isRanking() ? lineCount.intValue() - positions2.indexOf(line) : 0;
+                final int position = lineInfo.isRanking() ? lineCount - positions2.indexOf(line) : 0;
                 final String language = lineInfo.getLanguage();
                 final ResourceBundle rb = ResourceBundle.getBundle("", Locale.forLanguageTag(language.toLowerCase()), new ResourceBundle.Control(){
                     @Override
@@ -170,14 +167,14 @@ public class Todo {
                 pw.println();
                 pw.printf("%s%n", Stream.of("TR_1", "TR_2", "TR_3").map(rb::getString).collect(JOINING));
                 final Map<String, CostRecord> costByRemapping = totalPerLinePerRemapping.get(line);
-                costByRemapping.entrySet().stream().filter(kv -> kv.getValue().getAmountForHistogram().signum() != 0).forEach(kv -> {
+                costByRemapping.entrySet().stream().filter(kv -> kv.getValue().getAmountForHistogram() != 0).forEach(kv -> {
                     final String remapping = kv.getKey();
                     final CostRecord rec = kv.getValue();
                     final CostRecord totalRec = totalPerRemapping.get(remapping);
-                    final BigDecimal deviation = rec.getAmountForHistogram().subtract(totalRec.getAmountForHistogram().divide(lineCount, 4, RoundingMode.CEILING));
-                    pw.printf("%s%n", Stream.of(rb.getString(remapping), lineCount.intValue() - positionsPerRemapping2.get(remapping).indexOf(line), deviation).map(Object::toString).collect(JOINING));
+                    final double deviation = rec.getAmountForHistogram() - (totalRec.getAmountForHistogram() / lineCount);
+                    pw.printf("%s%n", Stream.of(rb.getString(remapping), lineCount - positionsPerRemapping2.get(remapping).indexOf(line), deviation).map(Object::toString).collect(JOINING));
                 });
-                pw.printf("%s%n", Stream.of(rb.getString("TR_14"), position, totalLineCost.subtract(total.getAmountForHistogram().divide(lineCount, 4, BigDecimal.ROUND_CEILING))).map(Object::toString).collect(JOINING));
+                pw.printf("%s%n", Stream.of(rb.getString("TR_14"), position, totalLineCost - (total.getAmountForHistogram() / lineCount)).map(Object::toString).collect(JOINING));
                 pw.printf("%s%n", Stream.of(rb.getString("TR_15"), lineCount).map(Object::toString).collect(JOINING));
                 for (final Map.Entry<Range, Integer> entry2: ranges.entrySet()){
                     if (entry2.getKey().includes(totalLineCost)){
@@ -189,7 +186,7 @@ public class Todo {
                 pw.println();
                 pw.printf("%s%n", rb.getString("CD_1"));
                 pw.printf("%s%n", Stream.of("CD_2", "CD_3", "CD_4", "CD_5", "CD_6", "CD_7", "CD_8").map(rb::getString).collect(JOINING));
-                martyrs.get(line).stream().filter(cdr -> !cdr.isSubscription()).forEach(cdr -> {
+                martyrsByLine.get(line).stream().filter(cdr -> !cdr.isSubscription()).forEach(cdr -> {
                     final String ds[] = cdr.getWhenDateAsCommaSeparatedString();
                     pw.printf("%s%n", Stream.of(rb.getString(cdr.getRemapping()), cdr.getRenaming(), cdr.getDestinationService(), cdr.getWhen(), cdr.getDestinationNumber().length() == 0 ? NO_NUMBER : cdr.getDestinationNumber(), cdr.getCost().getUnits(), cdr.getCost().getAmountForHistogram(), ds[0], ds[1], ds[2]).map(Object::toString).collect(JOINING));
                 });
