@@ -74,8 +74,8 @@ public class Todo {
         final Collector<CallDataRecord, ?, CostRecord> reducing = Collectors.reducing(CostRecord.ZERO, CallDataRecord::getCost, CostRecord::combine);
         final Map<String, CostRecord> totalPerLine = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, reducing));
         final Map<String, CostRecord> totalPerLineWithoutSubscription = martyrs.stream().filter(cdr -> !cdr.isSubscription()).collect(Collectors.groupingBy(CallDataRecord::getLine, reducing));
-        final Map<String, Map<String, CostRecord>> totalPerLinePerRemapping = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRemapping, reducing)));
-        final Map<String, Map<String, CostRecord>> totalPerLinePerRenaming = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRenaming, reducing)));
+        final Map<String, Map<String, CostRecord>> totalPerLinePerRemapping = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRemapping, TreeMap::new, reducing)));
+        final Map<String, Map<String, CostRecord>> totalPerLinePerRenaming = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getLine, Collectors.groupingBy(CallDataRecord::getRenaming, TreeMap::new, reducing)));
         final Map<String, CostRecord> totalPerRemapping = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getRemapping, reducing));
         final Map<String, String> remappingPerRenaming = martyrs.stream().collect(Collectors.groupingBy(CallDataRecord::getRenaming, Collectors.reducing(null, CallDataRecord::getRemapping, (remapping1, remapping2) -> remapping2)));
         final Set<String> lines = new TreeSet<>(totalPerLine.keySet());
@@ -187,8 +187,7 @@ public class Todo {
                 pw.printf("%s%n", rb.getString("CD_1"));
                 pw.printf("%s%n", Stream.of("CD_2", "CD_3", "CD_4", "CD_5", "CD_6", "CD_7", "CD_8").map(rb::getString).collect(JOINING));
                 martyrsByLine.get(line).stream().filter(cdr -> !cdr.isSubscription()).forEach(cdr -> {
-                    final String ds[] = cdr.getWhenDateAsCommaSeparatedString();
-                    pw.printf("%s%n", Stream.of(rb.getString(cdr.getRemapping()), cdr.getRenaming(), cdr.getDestinationService(), cdr.getWhen(), cdr.getDestinationNumber().length() == 0 ? NO_NUMBER : cdr.getDestinationNumber(), cdr.getCost().getUnits(), cdr.getCost().getAmountForHistogram(), ds[0], ds[1], ds[2]).map(Object::toString).collect(JOINING));
+                    pw.printf("%s%n", Stream.of(rb.getString(cdr.getRemapping()), cdr.getRenaming(), cdr.getDestinationService(), cdr.getWhen() == null ? "" : CallDataRecord.INPUT_DATE_TIME_FORMATTER.format(cdr.getWhen()), cdr.getDestinationNumber().length() == 0 ? NO_NUMBER : cdr.getDestinationNumber(), cdr.getCost().getUnits(), cdr.getCost().getAmountForHistogram(), cdr.getWhenDateAsCommaSeparatedString()).map(Object::toString).collect(JOINING));
                 });
                 pw.printf("%s%n", Stream.of(" #Appels/Oproepen/Calls:", totalLineCountWithoutSubscription).map(Object::toString).collect(JOINING));
                 pw.flush();

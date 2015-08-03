@@ -1,9 +1,14 @@
 package com.cycc.todo;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Created by jpc on 3/07/2015.
  */
 public class CallDataRecord implements Comparable<CallDataRecord> {
+    public static final DateTimeFormatter INPUT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+    private static final DateTimeFormatter OUTPUT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd;MM;yyyy");
     private static final String[] EMPTY_DATE = { "", "", "" };
     private final String line;
     private final String renaming;
@@ -11,7 +16,7 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
     private final String remapping;
     private final String destinationService;
     private final String destinationNumber;
-    private final String when;
+    private final LocalDateTime when;
     private final boolean included;
     private final CostRecord cost;
 
@@ -26,7 +31,7 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
         this.renaming = data[26 + 5];
         this.destinationService = data[26 + 6];
         this.destinationNumber = data[26 + 7];
-        this.when = data[26 + 10];
+        this.when = data[26 + 10].length() == 0 ? null : LocalDateTime.parse(data[26 + 10], INPUT_DATE_TIME_FORMATTER);
         this.included = Boolean.parseBoolean(data[26 + 19]);
         double units = Double.parseDouble(data[26 + 12]);
         if ("DURATION".equals(data[26 + 11])){
@@ -39,13 +44,16 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
         this.cost = new CostRecord(1, units, amountGross, amountNet, amountForHistogram, amountForMuac);
     }
 
-    public String[] getWhenDateAsCommaSeparatedString(){
+    public String getWhenDateAsCommaSeparatedString(){
+        return when == null ? ";;" : OUTPUT_DATE_TIME_FORMATTER.format(when);
+/*
         String[] ds = EMPTY_DATE;
         if (when != null && when.length() > 0){
             ds = when.substring(0, when.indexOf(' ')).split("/");
             ds[2] = ds[2].substring(2);
         }
         return ds;
+*/
     }
 
     public CostRecord getCost() {
@@ -72,7 +80,7 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
         return destinationNumber;
     }
 
-    public String getWhen() {
+    public LocalDateTime getWhen() {
         return when;
     }
 
@@ -90,6 +98,6 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
 
     @Override
     public int compareTo(CallDataRecord o) {
-        return when.compareTo(o.when);
+        return when == null ? -1 : (o.when == null ? 1 : when.compareTo(o.when));
     }
 }
