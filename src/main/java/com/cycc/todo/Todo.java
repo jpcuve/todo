@@ -89,11 +89,9 @@ public class Todo {
         final Set<String> lines = new TreeSet<>(totalPerLine.keySet());
         final int lineCount = lines.size();
         profiler.start("Computing positions");
-        final Map<String, List<String>> positionsPerRemapping2 = new HashMap<>();
+        final Map<String, List<String>> positionsPerRemapping = new HashMap<>();
         for (final String remapping: totalPerRemapping.keySet()){
-            positionsPerRemapping2.put(remapping, totalPerLine.keySet().stream().sorted((line1, line2) -> {
-                return CostRecord.compareByHistogram(totalPerLinePerRemapping.get(line1).get(remapping), totalPerLinePerRemapping.get(line2).get(remapping));
-            }).collect(Collectors.toList()));
+            positionsPerRemapping.put(remapping, totalPerLine.keySet().stream().sorted((line1, line2) -> CostRecord.compareByHistogram(totalPerLinePerRemapping.get(line1).get(remapping), totalPerLinePerRemapping.get(line2).get(remapping))).collect(Collectors.toList()));
         }
         final List<String> positions = totalPerLine.keySet().stream().sorted(Comparator.comparing(totalPerLine::get, CostRecord::compareByHistogram)).collect(Collectors.toList());
         final Map<String, Integer> positionPerLine = new HashMap<>();
@@ -169,7 +167,7 @@ public class Todo {
                     final CostRecord rec = kv.getValue();
                     final CostRecord totalRec = totalPerRemapping.get(remapping);
                     final double deviation = rec.getAmountForHistogram() - (totalRec.getAmountForHistogram() / lineCount);
-                    pw.printf("%s%n", Stream.of(rb.getString(remapping), lineCount - positionsPerRemapping2.get(remapping).indexOf(line), deviation).map(Object::toString).collect(JOINING));
+                    pw.printf("%s%n", Stream.of(rb.getString(remapping), lineCount - positionsPerRemapping.get(remapping).indexOf(line), deviation).map(Object::toString).collect(JOINING));
                 });
                 pw.printf("%s%n", Stream.of(rb.getString("TR_14"), position, totalLineCost - (total.getAmountForHistogram() / lineCount)).map(Object::toString).collect(JOINING));
                 pw.printf("%s%n", Stream.of(rb.getString("TR_15"), lineCount).map(Object::toString).collect(JOINING));

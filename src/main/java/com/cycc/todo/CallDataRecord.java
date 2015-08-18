@@ -50,14 +50,6 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
 
     public String getWhenDateAsCommaSeparatedString(){
         return when == null ? ";;" : OUTPUT_DATE_TIME_FORMATTER.format(when);
-/*
-        String[] ds = EMPTY_DATE;
-        if (when != null && when.length() > 0){
-            ds = when.substring(0, when.indexOf(' ')).split("/");
-            ds[2] = ds[2].substring(2);
-        }
-        return ds;
-*/
     }
 
     public CostRecord getCost() {

@@ -16,18 +16,6 @@ public class LineInfoRecord {
             "Threshold_Amount", "Budget (Y/N)", "Threshold_Amount Voice", "Date modification", "Comment modif",
             "Formule abonnement" //40
     };
-    public final String[] FIELDS = {
-            "", "", "", "", "",
-            "", "", "", "", "",
-            "", "", "", "", "", //10
-            "", "", "", "", "",
-            "", "", "", "", "", //20
-            "", "", "", "", "",
-            "", "", "", "", "", //30
-            "", "", "", "", "",
-            "" //40
-    };
-//    ,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Operator;Account;};
     private final String data;
     private String lineNumber;
     private String identification1;
@@ -115,6 +103,10 @@ public class LineInfoRecord {
         this.dateModification = ss[38];
         this.commentModification = ss[39];
         this.formuleAbonnement = ss[40];
+    }
+
+    public boolean isMuac(){
+        return muac == null || (muac.length() > 0 && Character.toUpperCase(muac.charAt(0)) != 'N');
     }
 
     public boolean isRanking(){
@@ -287,5 +279,12 @@ public class LineInfoRecord {
 
     public String getFormuleAbonnement() {
         return formuleAbonnement;
+    }
+
+    @Override
+    public String toString() {
+        return "LineInfoRecord{" +
+                "lineNumber='" + lineNumber + '\'' +
+                '}';
     }
 }
