@@ -4,7 +4,7 @@ package com.cycc.todo;
  * Created by jpc on 7/8/15.
  */
 public class CostRecord {
-    public static final CostRecord ZERO = new CostRecord(1, 0.0, 0.0, 0.0, 0.0, 0.0);
+    public static final CostRecord ZERO = new CostRecord(0, 0.0, 0.0, 0.0, 0.0, 0.0);
     private final int count;
     private final double units;
     private final double amountGross;

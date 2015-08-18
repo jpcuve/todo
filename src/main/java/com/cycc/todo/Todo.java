@@ -217,7 +217,16 @@ public class Todo {
             for (final String title: LineInfoRecord.TITLES){
                 pw.printf("%s;", title);
             }
-            pw.println("Operator;Account;");
+            pw.printf("Operator;Account;%s;%s;%s;", total.getUnits(), total.getAmountGross(), total.getAmountNet());
+            for (final Ranking ranking: Ranking.values()){
+                final CostRecord costRecord = totalPerRemapping.get(ranking.toString());
+                if (costRecord != null){
+                    pw.printf("%s;%s;%s;", costRecord.getCount(), costRecord.getUnits(), costRecord.getAmountNet());
+                } else {
+                    pw.print("0;0;0;");
+                }
+            }
+            pw.println();
             for (final String line: lines){
                 final LineInfoRecord lineInfo = lineInfoByLine.get(line);
                 if (lineInfo == null){
@@ -232,12 +241,12 @@ public class Todo {
                 for (final Ranking ranking: Ranking.values()){
                     final CostRecord costRecord = totalPerLinePerRemapping.get(line).get(ranking.toString());
                     if (costRecord != null){
-                        pw.printf("%s;%s;%s;", costRecord.getUnits(), costRecord.getUnits(), costRecord.getAmountNet());
+                        pw.printf("%s;%s;%s;", costRecord.getCount(), costRecord.getUnits(), costRecord.getAmountNet());
                     } else {
                         pw.print("0;0;0;");
                     }
                 }
-                pw.println(positionPerLine.get(line));
+                pw.println(positionPerLine.get(line) == 0 ? "NotRanked" : positionPerLine.get(line));
             }
             pw.printf("%s%n%n", "FIN OVERVIEW");
             pw.flush();
