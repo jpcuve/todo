@@ -204,7 +204,7 @@ public class Todo {
                 pw.flush();
                 zos.closeEntry();
             }
-            profiler.start("outputting overview file");
+            profiler.start("Outputting overview file");
             zos.putNextEntry(new ZipEntry(String.format("Overview_par_GSM_sur_base_de_Call_data_records_%s", cdrFileName)));
             pw.printf("%sSUMMARY;;;", semicolons(LineInfoRecord.TITLES.length + 2)); // 2 for Operator and Account
             for (final Ranking ranking: Ranking.values()){
