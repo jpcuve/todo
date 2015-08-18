@@ -92,20 +92,10 @@ public class Todo {
         final Map<String, List<String>> positionsPerRemapping2 = new HashMap<>();
         for (final String remapping: totalPerRemapping.keySet()){
             positionsPerRemapping2.put(remapping, totalPerLine.keySet().stream().sorted((line1, line2) -> {
-                final CostRecord cost1 = totalPerLinePerRemapping.get(line1).get(remapping);
-                final CostRecord cost2 = totalPerLinePerRemapping.get(line2).get(remapping);
-                final double c1 = cost1 == null ? 0 : cost1.getAmountForHistogram();
-                final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
-                return (int) Math.signum(c1 - c2);
+                return CostRecord.compareByHistogram(totalPerLinePerRemapping.get(line1).get(remapping), totalPerLinePerRemapping.get(line2).get(remapping));
             }).collect(Collectors.toList()));
         }
-        final List<String> positions2 = totalPerLine.keySet().stream().sorted((line1, line2) -> {
-            final CostRecord cost1 = totalPerLine.get(line1);
-            final CostRecord cost2 = totalPerLine.get(line2);
-            final double c1 = cost1 == null ? 0 : cost1.getAmountForHistogram();
-            final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
-            return (int) Math.signum(c1 - c2);
-        }).collect(Collectors.toList());
+        final List<String> positions = totalPerLine.keySet().stream().sorted(Comparator.comparing(totalPerLine::get, CostRecord::compareByHistogram)).collect(Collectors.toList());
         final Map<String, Integer> positionPerLine = new HashMap<>();
         profiler.start("Computing ranges");
         final Map<Range, Integer> ranges = new TreeMap<>();
@@ -122,11 +112,7 @@ public class Todo {
         }
         profiler.start("Computing mean and median");
         final double mean = total.getAmountForHistogram() / lineCount;
-        final List<CostRecord> costRecords2 = totalPerLine.values().stream().sorted((cost1, cost2) -> {
-            final double c1 = cost1 == null ? 0 : cost1.getAmountForHistogram();
-            final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
-            return (int) Math.signum(c1 - c2);
-        }).collect(Collectors.toList());
+        final List<CostRecord> costRecords2 = totalPerLine.values().stream().sorted(CostRecord::compareByHistogram).collect(Collectors.toList());
         final double median = costRecords2.size() == 0 ? 0 : costRecords2.get(costRecords2.size() / 2).getAmountForHistogram();
         try (
                 final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
@@ -144,7 +130,7 @@ public class Todo {
                 if (lineInfo == null){
                     lineInfo = LineInfoRecord.DEFAULT;
                 }
-                final int position = lineInfo.isRanking() ? lineCount - positions2.indexOf(line) : 0;
+                final int position = lineInfo.isRanking() ? lineCount - positions.indexOf(line) : 0;
                 positionPerLine.put(line, position);
                 final String language = lineInfo.getLanguage();
                 final ResourceBundle rb = ResourceBundle.getBundle("", Locale.forLanguageTag(language.toLowerCase()), new ResourceBundle.Control(){

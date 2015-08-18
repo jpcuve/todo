@@ -52,4 +52,10 @@ public class CostRecord {
     public double getCostPerUnit(){
         return units == 0 ? 0 : amountForHistogram / units;
     }
+
+    public static int compareByHistogram(CostRecord costRecord1, CostRecord costRecord2){
+        final double c1 = costRecord1 == null ? 0 : costRecord1.getAmountForHistogram();
+        final double c2 = costRecord2 == null ? 0 : costRecord2.getAmountForHistogram();
+        return (int) Math.signum(c1 - c2);
+    }
 }
