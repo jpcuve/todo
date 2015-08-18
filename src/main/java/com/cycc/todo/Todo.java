@@ -128,11 +128,11 @@ public class Todo {
             return (int) Math.signum(c1 - c2);
         }).collect(Collectors.toList());
         final double median = costRecords2.size() == 0 ? 0 : costRecords2.get(costRecords2.size() / 2).getAmountForHistogram();
-        profiler.start("Outputting files");
         try (
                 final ZipOutputStream zos = new ZipOutputStream(new FileOutputStream("output.zip"));
                 final PrintWriter pw = new PrintWriter(zos)
         ){
+            profiler.start("Outputting individual files");
             for (final Map.Entry<String, List<CallDataRecord>> entry: martyrsByLine.entrySet()){
                 final String line = entry.getKey();
                 final CostRecord totalLine = totalPerLine.get(line);
@@ -156,7 +156,8 @@ public class Todo {
                 final Map<String, CostRecord> costByRenaming = totalPerLinePerRenaming.get(line);
                 zos.putNextEntry(new ZipEntry(String.format("%s_(%s)_%s", line, lineInfo.getEmailForMuac(), cdrFileName)));
                 pw.printf("%s", Stream.of("CS_1", "CS_2", "CS_3", "CS_4", "CS_5", "CS_6").map(rb::getString).collect(JOINING));
-                pw.printf(";;;;;;%s", Stream.of(totalLineCostWithoutSubscription, totalLineCost, totalLineCountWithoutSubscription, costByRenaming.size(), position, median, mean).map(Object::toString).collect(JOINING));
+                int contest = 1; // TODO ?
+                pw.printf(";;;;;;%s", Stream.of(totalLineCostWithoutSubscription, totalLineCost, position, totalLineCountWithoutSubscription, costByRenaming.size(), contest, median, mean).map(Object::toString).collect(JOINING));
                 pw.printf(";%s", Stream.of(line, lineInfo.getIdentification1(), lineInfo.getLineNumber(), lineInfo.getIdentification1(), lineInfo.getIdentification2(), lineInfo.getDeviceType(), lineInfo.getOwnDevice(), lineInfo.getMuac(), lineInfo.getRanking(), lineInfo.getLanguage(), lineInfo.getEmailForMuac()).collect(JOINING));
                 pw.printf(";%s", Stream.of("", "").collect(JOINING)); // reserved1 & reserved2
                 pw.printf(";%s", Stream.of(lineInfo.getCompany(), lineInfo.getSite(), lineInfo.getGroupDepartment(), lineInfo.getUserId(), lineInfo.getCostCenter(), lineInfo.getAccountNumber(), lineInfo.getSubAccountNumber(), lineInfo.getProjectId(), lineInfo.getMnoProvider(), lineInfo.getMnoAccountNumber(), lineInfo.getCustomerAccountNumber()).collect(JOINING));
@@ -203,6 +204,7 @@ public class Todo {
                 pw.flush();
                 zos.closeEntry();
             }
+            profiler.start("outputting overview file");
             zos.putNextEntry(new ZipEntry(String.format("Overview_par_GSM_sur_base_de_Call_data_records_%s", cdrFileName)));
             pw.printf("%sSUMMARY;;;", semicolons(LineInfoRecord.TITLES.length + 2)); // 2 for Operator and Account
             for (final Ranking ranking: Ranking.values()){
