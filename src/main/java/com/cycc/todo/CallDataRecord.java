@@ -11,6 +11,8 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
     private static final DateTimeFormatter OUTPUT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("dd;MM;yyyy");
     private static final String[] EMPTY_DATE = { "", "", "" };
     private final String line;
+    private final String operator;
+    private final String accountNumber;
     private final String renaming;
     private final String histogram;
     private final String remapping;
@@ -26,6 +28,8 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
 
     public CallDataRecord(final String[] data) {
         this.line = data[26 + 0];
+        this.operator = data[26 + 1];
+        this.accountNumber = data[26 + 2];
         this.histogram = data[26 + 3];
         this.remapping = data[26 + 4];
         this.renaming = data[26 + 5];
@@ -62,6 +66,14 @@ public class CallDataRecord implements Comparable<CallDataRecord> {
 
     public String getLine() {
         return line;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
     public String getRenaming() {

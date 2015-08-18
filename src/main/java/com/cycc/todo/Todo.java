@@ -25,6 +25,14 @@ public class Todo {
     private static final String NO_NUMBER = "No Number";
     private static final Collector<CharSequence, ?, String> JOINING = Collectors.joining(";");
 
+    private static String semicolons(int quantity){
+        final StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < quantity; i++){
+            sb.append(';');
+        }
+        return sb.toString();
+    }
+
     public static void main(String[] args) throws Exception {
         LogManager.getLogManager().readConfiguration(Todo.class.getClassLoader().getResourceAsStream("logging.properties"));
         final Profiler profiler = new Profiler("todo");
@@ -98,6 +106,7 @@ public class Todo {
             final double c2 = cost2 == null ? 0 : cost2.getAmountForHistogram();
             return (int) Math.signum(c1 - c2);
         }).collect(Collectors.toList());
+        final Map<String, Integer> positionPerLine = new HashMap<>();
         profiler.start("Computing ranges");
         final Map<Range, Integer> ranges = new TreeMap<>();
         for (int i = 0; i < BOUNDARIES.length - 1; i++){
@@ -136,6 +145,7 @@ public class Todo {
                     lineInfo = LineInfoRecord.DEFAULT;
                 }
                 final int position = lineInfo.isRanking() ? lineCount - positions2.indexOf(line) : 0;
+                positionPerLine.put(line, position);
                 final String language = lineInfo.getLanguage();
                 final ResourceBundle rb = ResourceBundle.getBundle("", Locale.forLanguageTag(language.toLowerCase()), new ResourceBundle.Control(){
                     @Override
@@ -193,6 +203,45 @@ public class Todo {
                 pw.flush();
                 zos.closeEntry();
             }
+            zos.putNextEntry(new ZipEntry(String.format("Overview_par_GSM_sur_base_de_Call_data_records_%s", cdrFileName)));
+            pw.printf("%sSUMMARY;;;", semicolons(LineInfoRecord.TITLES.length + 2)); // 2 for Operator and Account
+            for (final Ranking ranking: Ranking.values()){
+                pw.printf("%s;;;", ranking);
+            }
+            pw.println(";;;"); // this is strange since there is only one field, the ranking
+            pw.printf("%sUnits;Gross Amount;Net_Amount;", semicolons(LineInfoRecord.TITLES.length + 2));
+            for (int i = 0; i < Ranking.values().length; i++){
+                pw.printf("UNITS;UNITS;COSTS;");
+            }
+            pw.println();
+            for (final String title: LineInfoRecord.TITLES){
+                pw.printf("%s;", title);
+            }
+            pw.println("Operator;Account;");
+            for (final String line: lines){
+                final LineInfoRecord lineInfo = lineInfoByLine.get(line);
+                if (lineInfo == null){
+                    pw.printf("%s;Line_not_identified;%s", line, semicolons(LineInfoRecord.TITLES.length - 2));
+                } else{
+                    pw.printf("%s;", lineInfo.getData());
+                }
+                final CallDataRecord callData = martyrsByLine.get(line).get(0);
+                pw.printf("%s;%s;", callData.getOperator(), callData.getAccountNumber().trim());
+                final CostRecord totalCostRecord = totalPerLine.get(line);
+                pw.printf("%s;%s;%s;", totalCostRecord.getUnits(), totalCostRecord.getAmountGross(), totalCostRecord.getAmountNet());
+                for (final Ranking ranking: Ranking.values()){
+                    final CostRecord costRecord = totalPerLinePerRemapping.get(line).get(ranking.toString());
+                    if (costRecord != null){
+                        pw.printf("%s;%s;%s;", costRecord.getUnits(), costRecord.getUnits(), costRecord.getAmountNet());
+                    } else {
+                        pw.print("0;0;0;");
+                    }
+                }
+                pw.println(positionPerLine.get(line));
+            }
+            pw.printf("%s%n%n", "FIN OVERVIEW");
+            pw.flush();
+            zos.closeEntry();
             profiler.stop().log();
         }
     }

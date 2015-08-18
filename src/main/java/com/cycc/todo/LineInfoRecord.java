@@ -5,6 +5,29 @@ package com.cycc.todo;
  */
 public class LineInfoRecord {
     public static final LineInfoRecord DEFAULT = new LineInfoRecord(";;;;;;;EN;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
+    public static final String[] TITLES = {
+            "Line Number", "Identification_1", "Identification_2", "Device Type", "Own Device",
+            "MUAC", "RANKING", "LANGUAGE", "E-MAIL_for_the_MUAC", "Private Adress",
+            "Date activation", "Company", "Site", "Group/Depart.", "User ID", //10
+            "Cost Center", "Account_Nb", "Sub-Account_Nb", "Project_Id", "MNO Provider",
+            "MNO_Account_NB", "Cust Acc Nbr", "Manager email_1", "Manager email_2", "BCC_email", //20
+            "Dynamic warning 1", "Dynamic warning 2", "SIM Id", "PUK", "Device Model",
+            "IMEI", "DATA_NAT_MB", "DATA_NAT_Sub", "DATA_ROAMING_MB", "DATA_ROAMING_Sub", //30
+            "Threshold_Amount", "Budget (Y/N)", "Threshold_Amount Voice", "Date modification", "Comment modif",
+            "Formule abonnement" //40
+    };
+    public final String[] FIELDS = {
+            "", "", "", "", "",
+            "", "", "", "", "",
+            "", "", "", "", "", //10
+            "", "", "", "", "",
+            "", "", "", "", "", //20
+            "", "", "", "", "",
+            "", "", "", "", "", //30
+            "", "", "", "", "",
+            "" //40
+    };
+//    ,;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;Operator;Account;};
     private final String data;
     private String lineNumber;
     private String identification1;
