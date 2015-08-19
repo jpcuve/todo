@@ -58,22 +58,12 @@ public class Todo {
         }
         profiler.start("Reading line info file");
         final File fLineInfo = new File("etc/sample/lhoist/input/FR_LHOISTP_01_Line_info_traffic_201412_(received from client 201412 and adapted by VBI).csv");
-        final Map<String, LineInfoRecord> lineInfoByLine = Files
-                .lines(fLineInfo.toPath(), StandardCharsets.ISO_8859_1)
-                .skip(2)
-                .filter(line -> !line.startsWith(";"))
-                .map(LineInfoRecord::new)
-                .collect(Collectors.toMap(LineInfoRecord::getLineNumber, Function.identity()));
+        final Map<String, LineInfoRecord> lineInfoByLine = Files.lines(fLineInfo.toPath(), StandardCharsets.ISO_8859_1).skip(2).filter(line -> !line.startsWith(";")).map(LineInfoRecord::new).collect(Collectors.toMap(LineInfoRecord::getLineNumber, Function.identity()));
         LOGGER.debug("count of lines in optifleet line info file: {}", lineInfoByLine.size());
         profiler.start("Reading martyr file");
         final String cdrFileName = "Call_data_records_Lhoist France_traffic_201505.txt";
         final File fMartyr = new File("etc/sample/lhoist/input/" + cdrFileName);
-        final Map<String, List<CallDataRecord>> martyrsByLine = Files
-                .lines(fMartyr.toPath(), StandardCharsets.ISO_8859_1)
-                .skip(1)
-                .map(CallDataRecord::new)
-                .sorted()
-                .collect(Collectors.groupingBy(CallDataRecord::getLine));
+        final Map<String, List<CallDataRecord>> martyrsByLine = Files.lines(fMartyr.toPath(), StandardCharsets.ISO_8859_1).skip(1).map(CallDataRecord::new).sorted().collect(Collectors.groupingBy(CallDataRecord::getLine));
         LOGGER.debug("count of lines in martyr file: {}", martyrsByLine.size());
         final List<CallDataRecord> martyrs = new ArrayList<>();
         martyrsByLine.values().stream().forEach(martyrs::addAll);
@@ -143,13 +133,13 @@ public class Todo {
                 int contest = 1; // TODO ?
                 pw.printf(";;;;;;%s", Stream.of(totalLineCostWithoutSubscription, totalLineCost, position, totalLineCountWithoutSubscription, costByRenaming.size(), contest, median, mean).map(Object::toString).collect(JOINING));
                 pw.printf(";%s", Stream.of(line, lineInfo.getIdentification1(), lineInfo.getLineNumber(), lineInfo.getIdentification1(), lineInfo.getIdentification2(), lineInfo.getDeviceType(), lineInfo.getOwnDevice(), lineInfo.getMuac(), lineInfo.getRanking(), lineInfo.getLanguage(), lineInfo.getEmailForMuac()).collect(JOINING));
-                pw.printf(";%s", Stream.of("", "").collect(JOINING)); // reserved1 & reserved2
+                pw.print(semicolons(2)); // reserved1 & reserved2
                 pw.printf(";%s", Stream.of(lineInfo.getCompany(), lineInfo.getSite(), lineInfo.getGroupDepartment(), lineInfo.getUserId(), lineInfo.getCostCenter(), lineInfo.getAccountNumber(), lineInfo.getSubAccountNumber(), lineInfo.getProjectId(), lineInfo.getMnoProvider(), lineInfo.getMnoAccountNumber(), lineInfo.getCustomerAccountNumber()).collect(JOINING));
-                pw.printf(";%s", ""); // reserved3
+                pw.print(semicolons(1)); // reserved3
                 pw.printf(";%s", Stream.of(lineInfo.getManagerEmail1(), lineInfo.getManagerEmail2(), lineInfo.getBccEmail(), lineInfo.getDynamicWarning1(), lineInfo.getDynamicWarning2()).collect(JOINING));
-                pw.printf(";%s", Stream.of("", "", "").collect(JOINING)); // reserved4, reserved5 & reserved6
+                pw.print(semicolons(3)); // reserved4, reserved5 & reserved6
                 pw.printf(";%s", Stream.of(lineInfo.getDataNationalMb(), lineInfo.getDataNationalSub(), lineInfo.getDataRoamingMb(), lineInfo.getDataRoamingSub(), lineInfo.getThresholdAmount(), lineInfo.getBudget(), lineInfo.getThresholdAmountVoice()).collect(JOINING));
-                pw.printf(";%s", Stream.of("", "", "").collect(JOINING)); // reserved7, reserved8 & reserved9
+                pw.print(semicolons(3)); // reserved7, reserved8 & reserved9
                 pw.printf(";%s", Stream.of("HIST_1", "HIST_2", "HIST_3", "HIST_4", "HIST_5", "HIST_6").map(rb::getString).collect(JOINING));
                 pw.printf(";%s%n", lineCount);
                 costByRenaming.entrySet().stream().forEach(kv -> {
